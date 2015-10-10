@@ -1,3 +1,17 @@
+# == Schema Information
+#
+# Table name: applicants
+#
+#  id         :integer          not null, primary key
+#  name       :text             not null
+#  phone      :text
+#  email      :text
+#  is_active  :integer          default(1), not null
+#  salary     :integer          not null
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
+
 require 'rails_helper'
 
 RSpec.describe Applicant, type: :model do

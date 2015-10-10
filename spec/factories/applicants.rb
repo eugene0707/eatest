@@ -6,7 +6,7 @@
 #  name       :text             not null
 #  phone      :text
 #  email      :text
-#  is_active  :boolean          default(TRUE), not null
+#  is_active  :integer          default(1), not null
 #  salary     :integer          not null
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
