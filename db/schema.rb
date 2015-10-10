@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151009212715) do
+ActiveRecord::Schema.define(version: 20151010071004) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,5 +21,21 @@ ActiveRecord::Schema.define(version: 20151009212715) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+  create_table "vacancies", force: :cascade do |t|
+    t.text     "name",         null: false
+    t.date     "available_to", null: false, index: {name: "index_vacancies_on_available_to"}
+    t.integer  "salary",       null: false, index: {name: "index_vacancies_on_salary"}
+    t.text     "phone"
+    t.text     "email"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
+  create_table "skills_vacancies", id: false, force: :cascade do |t|
+    t.integer "vacancy_id", null: false, index: {name: "index_skills_vacancies_on_vacancy_id"}, foreign_key: {references: "vacancies", name: "fk_skills_vacancies_vacancy_id", on_update: :no_action, on_delete: :no_action}
+    t.integer "skill_id",   null: false, index: {name: "index_skills_vacancies_on_skill_id"}, foreign_key: {references: "skills", name: "fk_skills_vacancies_skill_id", on_update: :no_action, on_delete: :no_action}
+  end
+  add_index "skills_vacancies", ["vacancy_id", "skill_id"], name: "index_skills_vacancies_on_vacancy_id_and_skill_id", unique: true
 
 end

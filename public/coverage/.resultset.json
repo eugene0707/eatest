@@ -18,9 +18,59 @@
         null,
         1,
         1,
+        null,
+        1,
+        null
+      ],
+      "C:/work/employment_agency/app/models/vacancy.rb": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        null,
+        2,
+        2,
+        null,
+        null
+      ],
+      "C:/work/employment_agency/app/validators/phone_validator.rb": [
+        1,
+        1,
+        8,
+        1,
+        null,
+        null,
+        null
+      ],
+      "C:/work/employment_agency/app/validators/email_validator.rb": [
+        1,
+        1,
+        9,
+        1,
+        null,
+        null,
         null
       ]
     },
-    "timestamp": 1444455199
+    "timestamp": 1444510462
   }
 }
