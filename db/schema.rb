@@ -11,16 +11,32 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151010071004) do
+ActiveRecord::Schema.define(version: 20151010212403) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "applicants", force: :cascade do |t|
+    t.text     "name",       null: false
+    t.text     "phone"
+    t.text     "email"
+    t.integer  "is_active",  default: 1, null: false, index: {name: "index_applicants_on_is_active"}
+    t.integer  "salary",     null: false, index: {name: "index_applicants_on_salary"}
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "skills", force: :cascade do |t|
     t.text     "name",       null: false, index: {name: "index_skills_on_name", unique: true}
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+  create_table "applicants_skills", id: false, force: :cascade do |t|
+    t.integer "applicant_id", null: false, index: {name: "index_applicants_skills_on_applicant_id"}, foreign_key: {references: "applicants", name: "fk_applicants_skills_applicant_id", on_update: :no_action, on_delete: :no_action}
+    t.integer "skill_id",     null: false, index: {name: "index_applicants_skills_on_skill_id"}, foreign_key: {references: "skills", name: "fk_applicants_skills_skill_id", on_update: :no_action, on_delete: :no_action}
+  end
+  add_index "applicants_skills", ["applicant_id", "skill_id"], name: "index_applicants_skills_on_applicant_id_and_skill_id", unique: true
 
   create_table "vacancies", force: :cascade do |t|
     t.text     "name",         null: false

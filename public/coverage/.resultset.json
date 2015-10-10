@@ -5,6 +5,51 @@
         1,
         null
       ],
+      "C:/work/employment_agency/app/models/applicant.rb": [
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        2,
+        2,
+        null,
+        null
+      ],
+      "C:/work/employment_agency/app/validators/russian_name_validator.rb": [
+        1,
+        1,
+        21,
+        12,
+        null,
+        null,
+        null
+      ],
+      "C:/work/employment_agency/app/validators/phone_validator.rb": [
+        1,
+        1,
+        16,
+        2,
+        null,
+        null,
+        null
+      ],
+      "C:/work/employment_agency/app/validators/email_validator.rb": [
+        1,
+        1,
+        18,
+        2,
+        null,
+        null,
+        null
+      ],
       "C:/work/employment_agency/app/models/skill.rb": [
         null,
         null,
@@ -16,6 +61,7 @@
         null,
         null,
         null,
+        1,
         1,
         1,
         null,
@@ -51,26 +97,8 @@
         2,
         null,
         null
-      ],
-      "C:/work/employment_agency/app/validators/phone_validator.rb": [
-        1,
-        1,
-        8,
-        1,
-        null,
-        null,
-        null
-      ],
-      "C:/work/employment_agency/app/validators/email_validator.rb": [
-        1,
-        1,
-        9,
-        1,
-        null,
-        null,
-        null
       ]
     },
-    "timestamp": 1444510462
+    "timestamp": 1444516602
   }
 }

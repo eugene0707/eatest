@@ -35,8 +35,6 @@ RSpec.describe Vacancy, type: :model do
     it { is_expected.to have_db_column(:created_at).with_options(null: false) }
     it { is_expected.to validate_presence_of(:available_to) }
     it { is_expected.to validate_presence_of(:salary) }
-    it { is_expected.to validate_presence_of(:phone) }
-    it { is_expected.to validate_presence_of(:email) }
   end
 
   context 'email validator' do
