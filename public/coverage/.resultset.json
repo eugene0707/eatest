@@ -1,7 +1,26 @@
 {
   "RSpec": {
     "coverage": {
+      "C:/work/employment_agency/app/helpers/application_helper.rb": [
+        1,
+        null
+      ],
+      "C:/work/employment_agency/app/models/skill.rb": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        1,
+        null
+      ]
     },
-    "timestamp": 1444322969
+    "timestamp": 1444455199
   }
 }
