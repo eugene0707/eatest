@@ -22,6 +22,9 @@ RSpec.describe Applicant, type: :model do
     it { is_expected.to respond_to(:is_active) }
     it { is_expected.to respond_to(:salary) }
     it { is_expected.to have_and_belong_to_many(:skills) }
+    it { is_expected.to respond_to(:vacancies) }
+    it { is_expected.to respond_to(:strict_vacancies) }
+    it { is_expected.to respond_to(:partial_vacancies) }
   end
 
   context 'class' do
@@ -83,4 +86,26 @@ RSpec.describe Applicant, type: :model do
 
     it { expect{applicant.skills << skill}.to raise_error(ActiveRecord::RecordNotUnique) }
   end
+
+  describe 'relative vacancies' do
+    let(:skill_1) {create(:skill)}
+    let(:skill_2) {create(:skill)}
+    let(:skill_3) {create(:skill)}
+    let(:skill_4) {create(:skill)}
+    let(:skill_5) {create(:skill)}
+    let(:applicant) {create(:applicant, skills: [skill_2, skill_4])}
+
+    let!(:vacancy_1) {create(:vacancy, salary: 70, skills: [skill_4])}
+    let!(:vacancy_2) {create(:vacancy, skills: [skill_2, skill_4])}
+    let!(:vacancy_3) {create(:vacancy, salary: 80, skills: [skill_2, skill_3, skill_4])}
+    let!(:vacancy_4) {create(:vacancy, skills: [skill_5])}
+    let!(:vacancy_5) {create(:vacancy, salary: 110, skills: [skill_1, skill_2])}
+    let!(:vacancy_6) {create(:vacancy, :not_available, skills: [skill_1, skill_2])}
+    let!(:vacancy_7) {create(:vacancy, :not_available, skills: [skill_2])}
+
+    it { expect(applicant.strict_vacancies).to eq([vacancy_2, vacancy_1]) }
+    it { expect(applicant.partial_vacancies).to eq([vacancy_5, vacancy_3]) }
+    it { expect(applicant.vacancies).to eq([vacancy_5, vacancy_2, vacancy_3, vacancy_1]) }
+  end
+
 end

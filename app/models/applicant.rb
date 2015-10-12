@@ -14,6 +14,7 @@
 
 class Applicant < ActiveRecord::Base
   has_and_belongs_to_many :skills
+  has_many :vacancies, through: :skills
 
   validates_presence_of :name, :is_active, :salary
   validates_presence_of :phone, unless: :email
@@ -24,7 +25,18 @@ class Applicant < ActiveRecord::Base
   validates :email, email: true, allow_nil: true
   validates :is_active, inclusion: { in: [0, 1] }
 
-  scope :active, -> {where(is_active: true)}
+  scope :active, -> {where(is_active: 1)}
   scope :by_salary, -> {order(salary: :asc)}
 
+  def vacancies
+    Vacancy.for_applicant(self)
+  end
+
+  def strict_vacancies
+    Vacancy.for_applicant(self, :strict)
+  end
+
+  def partial_vacancies
+    Vacancy.for_applicant(self, :partial)
+  end
 end
