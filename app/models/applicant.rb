@@ -14,7 +14,6 @@
 
 class Applicant < ActiveRecord::Base
   has_and_belongs_to_many :skills
-  has_many :vacancies, through: :skills
 
   validates_presence_of :name, :is_active, :salary
   validates_presence_of :phone, unless: :email
