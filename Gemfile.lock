@@ -39,6 +39,10 @@ GEM
     annotate (2.6.10)
       activerecord (>= 3.2, <= 4.3)
       rake (~> 10.4)
+    apitome (0.1.0)
+      kramdown
+      railties
+      rspec_api_documentation
     arel (6.0.3)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
@@ -62,6 +66,9 @@ GEM
     factory_girl_rails (4.5.0)
       factory_girl (~> 4.5.0)
       railties (>= 3.0.0)
+    factory_girl_rspec (2.1.0)
+      factory_girl (>= 2.0)
+      rspec (>= 2.0)
     ffi (1.9.10-x86-mingw32)
     formatador (0.2.5)
     globalid (0.3.6)
@@ -98,6 +105,7 @@ GEM
       actionpack (>= 3.0.0)
       activesupport (>= 3.0.0)
     key_struct (0.4.2)
+    kramdown (1.9.0)
     listen (3.0.3)
       rb-fsevent (>= 0.9.3)
       rb-inotify (>= 0.9)
@@ -251,6 +259,8 @@ GEM
       json (~> 1.7, >= 1.7.7)
       rdoc (~> 4.0)
     shellany (0.0.1)
+    shoulda-kept-respond-with-content-type (1.1.0)
+      shoulda-matchers (>= 2.1.0)
     shoulda-matchers (3.0.0)
       activesupport (>= 4.0.0)
     simplecov (0.10.0)
@@ -294,9 +304,11 @@ PLATFORMS
 
 DEPENDENCIES
   annotate
+  apitome
   byebug
   coffee-rails (~> 4.1.0)
   factory_girl_rails
+  factory_girl_rspec
   guard-bundler
   guard-rspec
   jbuilder (~> 2.0)
@@ -311,6 +323,7 @@ DEPENDENCIES
   sass-rails (~> 5.0)
   schema_plus
   sdoc (~> 0.4.0)
+  shoulda-kept-respond-with-content-type
   shoulda-matchers
   simplecov
   spring-commands-rspec

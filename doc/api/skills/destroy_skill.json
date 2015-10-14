@@ -1,0 +1,46 @@
+{
+  "resource": "Skills",
+  "http_method": "DELETE",
+  "route": "/api/skills/:id",
+  "description": "Destroy skill",
+  "explanation": null,
+  "parameters": [
+    {
+      "required": true,
+      "name": "id",
+      "description": " id"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "DELETE",
+      "request_path": "/api/skills/2884",
+      "request_body": null,
+      "request_headers": {
+        "Host": "example.org",
+        "Content-Type": "application/x-www-form-urlencoded",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/x-www-form-urlencoded",
+      "response_status": 204,
+      "response_status_text": "No Content",
+      "response_body": null,
+      "response_headers": {
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "Cache-Control": "no-cache",
+        "Set-Cookie": "request_method=DELETE; path=/",
+        "X-Request-Id": "72b146c6-33b4-46b0-8630-5b2416e04094",
+        "X-Runtime": "0.083077"
+      },
+      "response_content_type": null,
+      "curl": null
+    }
+  ]
+}

@@ -14,7 +14,7 @@
 
 require 'rails_helper'
 
-RSpec.describe Vacancy, type: :model do
+RSpec.describe Vacancy do
   context 'instance' do
     it { is_expected.to respond_to(:name) }
     it { is_expected.to respond_to(:created_at) }

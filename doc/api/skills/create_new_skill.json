@@ -1,0 +1,49 @@
+{
+  "resource": "Skills",
+  "http_method": "POST",
+  "route": "/api/skills",
+  "description": "Create new skill",
+  "explanation": null,
+  "parameters": [
+    {
+      "required": true,
+      "name": "skill",
+      "description": " skill"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "POST",
+      "request_path": "/api/skills",
+      "request_body": "skill[name]=Skill+7",
+      "request_headers": {
+        "Host": "example.org",
+        "Content-Type": "application/x-www-form-urlencoded",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/x-www-form-urlencoded",
+      "response_status": 201,
+      "response_status_text": "Created",
+      "response_body": "{\n  \"id\": 2881,\n  \"name\": \"Skill 7\"\n}",
+      "response_headers": {
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"a7f51421e6cc689b5252b677d04b0fae\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "Set-Cookie": "request_method=POST; path=/",
+        "X-Request-Id": "e830d416-b09f-48de-a47d-dfc991fe6cc9",
+        "X-Runtime": "0.007822",
+        "Content-Length": "28"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}

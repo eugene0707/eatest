@@ -10,7 +10,7 @@
 
 require 'rails_helper'
 
-RSpec.describe Skill, type: :model do
+RSpec.describe Skill do
   it { is_expected.to respond_to(:name) }
 
   it { is_expected.to validate_presence_of(:name) }

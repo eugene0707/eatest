@@ -1,0 +1,44 @@
+{
+  "resources": [
+    {
+      "name": "Skills",
+      "examples": [
+        {
+          "description": "Create new skill",
+          "link": "skills/create_new_skill.json",
+          "groups": "all",
+          "route": "/api/skills",
+          "method": "post"
+        },
+        {
+          "description": "Destroy skill",
+          "link": "skills/destroy_skill.json",
+          "groups": "all",
+          "route": "/api/skills/:id",
+          "method": "delete"
+        },
+        {
+          "description": "List of skills",
+          "link": "skills/list_of_skills.json",
+          "groups": "all",
+          "route": "/api/skills",
+          "method": "get"
+        },
+        {
+          "description": "Show skill",
+          "link": "skills/show_skill.json",
+          "groups": "all",
+          "route": "/api/skills/:id",
+          "method": "get"
+        },
+        {
+          "description": "Update skill",
+          "link": "skills/update_skill.json",
+          "groups": "all",
+          "route": "/api/skills/:id",
+          "method": "put"
+        }
+      ]
+    }
+  ]
+}

@@ -55,7 +55,7 @@ guard :rspec, cmd: "bundle exec rspec" do
   dsl.watch_spec_files_for(ruby.lib_files)
 
   # Rails files
-  rails = dsl.rails(view_extensions: %w(erb haml slim))
+  rails = dsl.rails(view_extensions: %w(erb haml slim jbuilder))
   dsl.watch_spec_files_for(rails.app_files)
   dsl.watch_spec_files_for(rails.views)
 
@@ -76,9 +76,4 @@ guard :rspec, cmd: "bundle exec rspec" do
   watch(rails.view_dirs)     { |m| rspec.spec.("features/#{m[1]}") }
   watch(rails.layouts)       { |m| rspec.spec.("features/#{m[1]}") }
 
-  # Turnip features and steps
-  watch(%r{^spec/acceptance/(.+)\.feature$})
-  watch(%r{^spec/acceptance/steps/(.+)_steps\.rb$}) do |m|
-    Dir[File.join("**/#{m[1]}.feature")][0] || "spec/acceptance"
-  end
 end

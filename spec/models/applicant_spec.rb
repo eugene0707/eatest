@@ -14,7 +14,7 @@
 
 require 'rails_helper'
 
-RSpec.describe Applicant, type: :model do
+RSpec.describe Applicant do
   context 'instance' do
     it { is_expected.to respond_to(:name) }
     it { is_expected.to respond_to(:phone) }

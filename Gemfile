@@ -53,7 +53,9 @@ group :development do
 end
 
 group :test do
+  gem 'factory_girl_rspec'
   gem 'shoulda-matchers'
+  gem 'shoulda-kept-respond-with-content-type'
   gem 'simplecov', require: false
 end
 
@@ -61,3 +63,4 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'schema_plus'
 gem 'kaminari'
+gem 'apitome'

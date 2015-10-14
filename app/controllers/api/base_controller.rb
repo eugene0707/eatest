@@ -1,8 +1,13 @@
 module Api
   class BaseController < ApplicationController
     protect_from_forgery with: :null_session
+
+    rescue_from ActiveRecord::RecordNotFound, with: :render_not_found
+    rescue_from ActiveRecord::RecordNotUnique, with: :render_not_unique
+    rescue_from ActionController::ParameterMissing, with: :render_no_parameters
+
+    before_action :force_request_format
     before_action :set_resource, only: [:destroy, :show, :update]
-    respond_to :json
 
     # POST /api/{plural_resource_name}
     def create
@@ -29,12 +34,10 @@ module Api
       .per(page_params[:page_size])
 
       instance_variable_set(plural_resource_name, resources)
-      respond_with instance_variable_get(plural_resource_name)
     end
 
     # GET /api/{plural_resource_name}/1
     def show
-      respond_with get_resource
     end
 
     # PATCH/PUT /api/{plural_resource_name}/1
@@ -93,6 +96,22 @@ module Api
     def set_resource(resource = nil)
       resource ||= resource_class.find(params[:id])
       instance_variable_set("@#{resource_name}", resource)
+    end
+
+    def force_request_format
+      request.format=:json
+    end
+
+    def render_not_found
+      render json: {error: t('exceptions.not_found')}, status: :not_found
+    end
+
+    def render_not_unique
+      render json: {error: t('exceptions.not_unique')}, status: :unprocessable_entity
+    end
+
+    def render_no_parameters
+      render json: {error: t('exceptions.no_parameters')}, status: :unprocessable_entity
     end
   end
 end
