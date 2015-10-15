@@ -15,5 +15,5 @@ RSpec.describe "api/skills/show.json.jbuilder" do
     expect(parsed['name']).to eq('Skill 1')
   end
 
-  it { is_expected.to render_template(:partial => "_skill") }
+  it { is_expected.to render_template(partial: "_skill") }
 end

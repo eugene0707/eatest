@@ -1,8 +1,8 @@
 {
-  "resource": "Skills",
+  "resource": "Vacancies",
   "http_method": "DELETE",
-  "route": "/api/skills/:id",
-  "description": "Destroy skill",
+  "route": "/api/vacancies/:id",
+  "description": "Destroy vacancy",
   "explanation": null,
   "parameters": [
     {
@@ -17,7 +17,7 @@
   "requests": [
     {
       "request_method": "DELETE",
-      "request_path": "/api/skills/3618",
+      "request_path": "/api/vacancies/1546",
       "request_body": null,
       "request_headers": {
         "Host": "example.org",
@@ -36,8 +36,8 @@
         "X-Content-Type-Options": "nosniff",
         "Cache-Control": "no-cache",
         "Set-Cookie": "request_method=DELETE; path=/",
-        "X-Request-Id": "4a8499ea-9b4a-4b39-971e-c94224139ba4",
-        "X-Runtime": "0.072049"
+        "X-Request-Id": "f0f86e35-5047-4c25-9149-a5967cccd6a5",
+        "X-Runtime": "0.006546"
       },
       "response_content_type": null,
       "curl": null

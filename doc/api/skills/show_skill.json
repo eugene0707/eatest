@@ -17,7 +17,7 @@
   "requests": [
     {
       "request_method": "GET",
-      "request_path": "/api/skills/2877",
+      "request_path": "/api/skills/3611",
       "request_body": null,
       "request_headers": {
         "Host": "example.org",
@@ -28,16 +28,16 @@
       "request_content_type": null,
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"id\": 2877,\n  \"name\": \"Skill 3\"\n}",
+      "response_body": "{\n  \"id\": 3611,\n  \"name\": \"Skill 3\"\n}",
       "response_headers": {
         "X-Frame-Options": "SAMEORIGIN",
         "X-XSS-Protection": "1; mode=block",
         "X-Content-Type-Options": "nosniff",
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "W/\"bd728f2d5fb36c6b457aafa0b01e8e77\"",
+        "ETag": "W/\"84bfb106280c6e812b291a02e800e722\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "4e4dcf68-c808-4061-acb5-0af407c58f77",
-        "X-Runtime": "0.019741",
+        "X-Request-Id": "bb279508-3635-49ee-b7b6-0223c5c949a0",
+        "X-Runtime": "0.016876",
         "Content-Length": "28"
       },
       "response_content_type": "application/json; charset=utf-8",

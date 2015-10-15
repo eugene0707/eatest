@@ -7,9 +7,5 @@ module Api
       params.require(:skill).permit(:name)
     end
 
-    def query_params
-      params.permit(:name)
-    end
-
   end
 end

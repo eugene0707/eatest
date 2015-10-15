@@ -3,7 +3,7 @@ require 'rspec_api_documentation/dsl'
 
 resource 'Skills' do
   before do
-    @skill_1, @skill2=[ FactoryGirl.create(:skill), FactoryGirl.create(:skill) ]
+    @skill_1, @skill2=[ create(:skill), create(:skill) ]
   end
 
   get '/api/skills' do

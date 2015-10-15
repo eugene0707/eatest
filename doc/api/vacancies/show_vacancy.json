@@ -1,0 +1,47 @@
+{
+  "resource": "Vacancies",
+  "http_method": "GET",
+  "route": "/api/vacancies/:id",
+  "description": "Show vacancy",
+  "explanation": null,
+  "parameters": [
+    {
+      "required": true,
+      "name": "id",
+      "description": " id"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "/api/vacancies/1539",
+      "request_body": null,
+      "request_headers": {
+        "Host": "example.org",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": null,
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"id\": 1539,\n  \"name\": \"Vacancy 3\",\n  \"created_at\": \"2015-10-15T00:11:24.259Z\",\n  \"available_to\": \"2015-10-16\",\n  \"salary\": 100,\n  \"phone\": \"+7(495)123-4567\",\n  \"email\": \"user@example.com\",\n  \"skills\": [\n    {\n      \"id\": 3622,\n      \"name\": \"Skill 15\"\n    },\n    {\n      \"id\": 3623,\n      \"name\": \"Skill 16\"\n    }\n  ],\n  \"strict_applicants\": [\n    {\n      \"id\": 1231,\n      \"name\": \"Иванов Иван Отчествод\",\n      \"phone\": \"+7(495)123-4567\",\n      \"email\": \"user@example.com\",\n      \"is_active\": 1,\n      \"salary\": 100\n    }\n  ],\n  \"partial_applicants\": [\n    {\n      \"id\": 1232,\n      \"name\": \"Иванов Иван Отчествои\",\n      \"phone\": \"+7(495)123-4567\",\n      \"email\": \"user@example.com\",\n      \"is_active\": 1,\n      \"salary\": 100\n    }\n  ]\n}",
+      "response_headers": {
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"b2d994b4d6d1cfbca8a578fc623336d8\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "d8bfde37-e8b4-4d08-b8b2-db75e7148305",
+        "X-Runtime": "0.040089",
+        "Content-Length": "564"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}

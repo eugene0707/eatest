@@ -39,6 +39,46 @@
           "method": "put"
         }
       ]
+    },
+    {
+      "name": "Vacancies",
+      "examples": [
+        {
+          "description": "Create new vacancy",
+          "link": "vacancies/create_new_vacancy.json",
+          "groups": "all",
+          "route": "/api/vacancies",
+          "method": "post"
+        },
+        {
+          "description": "Destroy vacancy",
+          "link": "vacancies/destroy_vacancy.json",
+          "groups": "all",
+          "route": "/api/vacancies/:id",
+          "method": "delete"
+        },
+        {
+          "description": "List of vacancies",
+          "link": "vacancies/list_of_vacancies.json",
+          "groups": "all",
+          "route": "/api/vacancies",
+          "method": "get"
+        },
+        {
+          "description": "Show vacancy",
+          "link": "vacancies/show_vacancy.json",
+          "groups": "all",
+          "route": "/api/vacancies/:id",
+          "method": "get"
+        },
+        {
+          "description": "Update vacancy",
+          "link": "vacancies/update_vacancy.json",
+          "groups": "all",
+          "route": "/api/vacancies/:id",
+          "method": "put"
+        }
+      ]
     }
   ]
 }

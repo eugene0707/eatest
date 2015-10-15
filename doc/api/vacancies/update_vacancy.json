@@ -1,0 +1,54 @@
+{
+  "resource": "Vacancies",
+  "http_method": "PUT",
+  "route": "/api/vacancies/:id",
+  "description": "Update vacancy",
+  "explanation": null,
+  "parameters": [
+    {
+      "required": true,
+      "name": "id",
+      "description": " id"
+    },
+    {
+      "required": true,
+      "name": "vacancy",
+      "description": " vacancy"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "PUT",
+      "request_path": "/api/vacancies/1544",
+      "request_body": "vacancy[name]=Vacancy+10&vacancy[available_to]=2015-10-16+00%3A11%3A24+UTC&vacancy[salary]=100&vacancy[phone]=%2B7%28495%29123-4567&vacancy[email]=user%40example.com&vacancy[skill_ids][]=3626&vacancy[skill_ids][]=3627",
+      "request_headers": {
+        "Host": "example.org",
+        "Content-Type": "application/x-www-form-urlencoded",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/x-www-form-urlencoded",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"id\": 1544,\n  \"name\": \"Vacancy 10\",\n  \"created_at\": \"2015-10-15T00:11:24.469Z\",\n  \"available_to\": \"2015-10-16\",\n  \"salary\": 100,\n  \"phone\": \"+7(495)123-4567\",\n  \"email\": \"user@example.com\",\n  \"skills\": [\n    {\n      \"id\": 3626,\n      \"name\": \"Skill 19\"\n    },\n    {\n      \"id\": 3627,\n      \"name\": \"Skill 20\"\n    }\n  ],\n  \"strict_applicants\": [\n    {\n      \"id\": 1235,\n      \"name\": \"Иванов Иван Отчествоы\",\n      \"phone\": \"+7(495)123-4567\",\n      \"email\": \"user@example.com\",\n      \"is_active\": 1,\n      \"salary\": 100\n    }\n  ],\n  \"partial_applicants\": [\n    {\n      \"id\": 1236,\n      \"name\": \"Иванов Иван Отчествой\",\n      \"phone\": \"+7(495)123-4567\",\n      \"email\": \"user@example.com\",\n      \"is_active\": 1,\n      \"salary\": 100\n    }\n  ]\n}",
+      "response_headers": {
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"2d721f83cfdcc1af6020f03b9ffc3ce5\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "Set-Cookie": "request_method=PUT; path=/",
+        "X-Request-Id": "20d75fc2-0e65-43bf-8eaf-5b6afc6f903e",
+        "X-Runtime": "0.016614",
+        "Content-Length": "565"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}
