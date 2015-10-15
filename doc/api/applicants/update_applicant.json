@@ -1,0 +1,54 @@
+{
+  "resource": "Applicants",
+  "http_method": "PUT",
+  "route": "/api/applicants/:id",
+  "description": "Update applicant",
+  "explanation": null,
+  "parameters": [
+    {
+      "required": true,
+      "name": "id",
+      "description": " id"
+    },
+    {
+      "required": true,
+      "name": "applicant",
+      "description": " applicant"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "PUT",
+      "request_path": "/api/applicants/1503",
+      "request_body": "applicant[name]=%D0%98%D0%B2%D0%B0%D0%BD%D0%BE%D0%B2+%D0%98%D0%B2%D0%B0%D0%BD+%D0%9E%D1%82%D1%87%D0%B5%D1%81%D1%82%D0%B2%D0%BE%D0%B3&applicant[is_active]=1&applicant[salary]=100&applicant[phone]=%2B7%28495%29123-4567&applicant[email]=user%40example.com&applicant[skill_ids][]=3941&applicant[skill_ids][]=3942",
+      "request_headers": {
+        "Host": "example.org",
+        "Content-Type": "application/x-www-form-urlencoded",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/x-www-form-urlencoded",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"id\": 1503,\n  \"name\": \"Иванов Иван Отчествог\",\n  \"phone\": \"+7(495)123-4567\",\n  \"email\": \"user@example.com\",\n  \"is_active\": 1,\n  \"salary\": 100,\n  \"skills\": [\n    {\n      \"id\": 3941,\n      \"name\": \"Skill 10\"\n    },\n    {\n      \"id\": 3942,\n      \"name\": \"Skill 11\"\n    }\n  ],\n  \"strict_vacancies\": [\n    {\n      \"id\": 1779,\n      \"name\": \"Vacancy 7\",\n      \"created_at\": \"2015-10-15T01:18:08.881Z\",\n      \"available_to\": \"2015-10-16\",\n      \"salary\": 100,\n      \"phone\": \"+7(495)123-4567\",\n      \"email\": \"user@example.com\"\n    }\n  ],\n  \"partial_vacancies\": [\n    {\n      \"id\": 1780,\n      \"name\": \"Vacancy 8\",\n      \"created_at\": \"2015-10-15T01:18:08.891Z\",\n      \"available_to\": \"2015-10-16\",\n      \"salary\": 100,\n      \"phone\": \"+7(495)123-4567\",\n      \"email\": \"user@example.com\"\n    }\n  ]\n}",
+      "response_headers": {
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"e96269f87fca390524e4f10740316afd\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "Set-Cookie": "request_method=PUT; path=/",
+        "X-Request-Id": "9460f547-1499-40e0-8e69-b24e7ae8bf93",
+        "X-Runtime": "0.016374",
+        "Content-Length": "585"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}

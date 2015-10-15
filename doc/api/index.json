@@ -1,6 +1,46 @@
 {
   "resources": [
     {
+      "name": "Applicants",
+      "examples": [
+        {
+          "description": "Create new applicant",
+          "link": "applicants/create_new_applicant.json",
+          "groups": "all",
+          "route": "/api/applicants",
+          "method": "post"
+        },
+        {
+          "description": "Destroy applicant",
+          "link": "applicants/destroy_applicant.json",
+          "groups": "all",
+          "route": "/api/applicants/:id",
+          "method": "delete"
+        },
+        {
+          "description": "List of applicants",
+          "link": "applicants/list_of_applicants.json",
+          "groups": "all",
+          "route": "/api/applicants",
+          "method": "get"
+        },
+        {
+          "description": "Show applicant",
+          "link": "applicants/show_applicant.json",
+          "groups": "all",
+          "route": "/api/applicants/:id",
+          "method": "get"
+        },
+        {
+          "description": "Update applicant",
+          "link": "applicants/update_applicant.json",
+          "groups": "all",
+          "route": "/api/applicants/:id",
+          "method": "put"
+        }
+      ]
+    },
+    {
       "name": "Skills",
       "examples": [
         {

@@ -1,8 +1,8 @@
 {
-  "resource": "Skills",
+  "resource": "Applicants",
   "http_method": "DELETE",
-  "route": "/api/skills/:id",
-  "description": "Destroy skill",
+  "route": "/api/applicants/:id",
+  "description": "Destroy applicant",
   "explanation": null,
   "parameters": [
     {
@@ -17,7 +17,7 @@
   "requests": [
     {
       "request_method": "DELETE",
-      "request_path": "/api/skills/3956",
+      "request_path": "/api/applicants/1505",
       "request_body": null,
       "request_headers": {
         "Host": "example.org",
@@ -36,8 +36,8 @@
         "X-Content-Type-Options": "nosniff",
         "Cache-Control": "no-cache",
         "Set-Cookie": "request_method=DELETE; path=/",
-        "X-Request-Id": "a98ecda1-68f5-451a-8f62-133a759e85db",
-        "X-Runtime": "0.013500"
+        "X-Request-Id": "bf74a82e-ba72-49fd-8761-4d64066da064",
+        "X-Runtime": "0.004330"
       },
       "response_content_type": null,
       "curl": null

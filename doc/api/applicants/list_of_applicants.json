@@ -1,8 +1,8 @@
 {
-  "resource": "Skills",
+  "resource": "Applicants",
   "http_method": "GET",
-  "route": "/api/skills",
-  "description": "List of skills",
+  "route": "/api/applicants",
+  "description": "List of applicants",
   "explanation": null,
   "parameters": [
 
@@ -13,7 +13,7 @@
   "requests": [
     {
       "request_method": "GET",
-      "request_path": "/api/skills",
+      "request_path": "/api/applicants",
       "request_body": null,
       "request_headers": {
         "Host": "example.org",
@@ -24,17 +24,17 @@
       "request_content_type": null,
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "[\n  {\n    \"id\": 3947,\n    \"name\": \"Skill 16\"\n  },\n  {\n    \"id\": 3948,\n    \"name\": \"Skill 17\"\n  }\n]",
+      "response_body": "[\n  {\n    \"id\": 1496,\n    \"name\": \"Иванов Иван Отчествот\",\n    \"phone\": \"+7(495)123-4567\",\n    \"email\": \"user@example.com\",\n    \"is_active\": 1,\n    \"salary\": 100\n  },\n  {\n    \"id\": 1497,\n    \"name\": \"Иванов Иван Отчествоц\",\n    \"phone\": \"+7(495)123-4567\",\n    \"email\": \"user@example.com\",\n    \"is_active\": 1,\n    \"salary\": 100\n  }\n]",
       "response_headers": {
         "X-Frame-Options": "SAMEORIGIN",
         "X-XSS-Protection": "1; mode=block",
         "X-Content-Type-Options": "nosniff",
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "W/\"d1d8490e3d32e7c181aed6de3e0fc8ac\"",
+        "ETag": "W/\"c1a531996be28ac16849feab0832ec09\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "32bd08a1-68c7-4ecc-9279-50ebc958d8ab",
-        "X-Runtime": "0.015616",
-        "Content-Length": "61"
+        "X-Request-Id": "533576a5-0c9b-4ada-b9ce-93159289efd5",
+        "X-Runtime": "0.066075",
+        "Content-Length": "285"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null
