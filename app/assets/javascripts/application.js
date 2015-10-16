@@ -9,11 +9,12 @@
 //
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
-//
+//= require jquery
 //= require angular
-//= require angular-rails-templates
+//= require angular-route/angular-route
 //= require lodash
 //= require restangular
+//= require angular-rails-templates
 
 //= require angular-bootstrap
 //= require bootstrap-sprockets
@@ -26,3 +27,4 @@
 //= require_tree ./angular-app/models
 //= require_tree ./angular-app/services
 //= require_tree ./angular-app/controllers
+//= require angular-app/routes

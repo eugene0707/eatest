@@ -170,6 +170,13 @@
         null,
         null
       ],
+      "C:/work/employment_agency/app/controllers/home_controller.rb": [
+        1,
+        1,
+        null,
+        null,
+        null
+      ],
       "C:/work/employment_agency/app/models/applicant.rb": [
         null,
         null,
@@ -310,6 +317,6 @@
         null
       ]
     },
-    "timestamp": 1444871925
+    "timestamp": 1444991876
   }
 }

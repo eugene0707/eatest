@@ -1,5 +1,6 @@
-@app = angular.module('app', [
-
+@app = angular.module('employmentAgency', [
+  'templates'
+  'ngRoute'
 ])
 
 @app.config([
@@ -8,5 +9,5 @@
 ])
 
 @app.run(->
-  console.log 'angular app running'
+  console.log 'employmentAgency app running'
 )
