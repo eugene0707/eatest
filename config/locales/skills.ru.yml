@@ -1,0 +1,8 @@
+ru:
+  activerecord:
+    models:
+      skill: Навык
+
+    attributes:
+      skill:
+        name: Навык

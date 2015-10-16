@@ -1,0 +1,13 @@
+ru:
+  activerecord:
+    models:
+      vacancy: Вакансия
+
+    attributes:
+      vacancy:
+        name: Должность
+        created_at: Добавлена
+        available_to: Истекает
+        salary: Оклад
+        phone: Телефон
+        email: Email

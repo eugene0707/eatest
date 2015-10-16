@@ -1,0 +1,12 @@
+ru:
+  activerecord:
+    models:
+      applicant: Соискатель
+
+    attributes:
+      applicant:
+        name: Имя
+        phone: Телефон
+        email: Email
+        is_active: Статус
+        salary: Оклад
