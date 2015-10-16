@@ -1,11 +1,18 @@
 @app = angular.module('employmentAgency', [
   'templates'
-  'ngRoute'
+  'ngResource'
+  'ngSanitize'
+  'restangular'
+  'ui.router'
 ])
 
 @app.config([
-  '$httpProvider', ($httpProvider)->
-    $httpProvider.defaults.headers.common['X-CSRF-Token'] = $('meta[name=csrf-token]').attr('content')
+  'RestangularProvider'
+  (RestangularProvider)->
+
+    RestangularProvider
+    .setBaseUrl('/api')
+    .setRequestSuffix('.json')
 ])
 
 @app.run(->

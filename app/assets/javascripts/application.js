@@ -15,6 +15,9 @@
 //= require lodash
 //= require restangular
 //= require angular-rails-templates
+//= require angular-resource/angular-resource
+//= require angular-ui-router
+//= require angular-sanitize/angular-sanitize
 
 //= require angular-bootstrap
 //= require bootstrap-sprockets

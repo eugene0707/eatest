@@ -1,15 +1,17 @@
 @app.config [
-  '$routeProvider'
+  '$stateProvider'
+  '$urlRouterProvider'
   '$locationProvider'
-  ($routeProvider, $locationProvider) ->
-    $routeProvider
-    .when '/',
-      templateUrl: 'home/index.html',
-      controller: 'HomeController'
-      controllerAs: 'homeCtrl'
+  ($stateProvider, $urlRouterProvider, $locationProvider) ->
 
-    .otherwise
-      redirectTo: '/'
+    $urlRouterProvider
+      .otherwise '/'
 
-    $locationProvider.html5Mode true
+    $stateProvider
+      .state 'home',
+        url: '/'
+        templateUrl: 'home/index.html'
+        controller: 'HomeController'
+
+    #$locationProvider.html5Mode true
 ]

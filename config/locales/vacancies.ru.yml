@@ -11,3 +11,20 @@ ru:
         salary: Оклад
         phone: Телефон
         email: Email
+
+  vacancies:
+    index:
+      title: Вакансии
+      new: Новая вакансия
+      confirmation: Вы уверены, что хотите удалить вакансию?
+    show:
+      title: Вакансия
+      edit: Редактировать
+    new:
+      title: Новая вакансия
+      submit: Создать
+      cancel: Назад
+    edit:
+      title: Рекдактирование вакансии
+      submit: Сохранить
+      cancel: Назад
