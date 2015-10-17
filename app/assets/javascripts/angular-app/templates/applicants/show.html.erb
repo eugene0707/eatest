@@ -1,0 +1,71 @@
+<div class="row">
+  <h1 class="col-sm-6"><%= I18n.t(:title, scope: [:applicants, :show]) %></h1>
+
+  <div class="page-actions col-sm-6">
+    <a class="btn btn-link" ui-sref="applicants.index"><%=I18n.t(:back, scope: [:applicants, :show])%></a>
+    <a class="btn btn-success" ui-sref="applicants.edit({id: applicant.id})"><span class="glyphicon glyphicon-pencil"></span> <%=I18n.t(:edit, scope: [:applicants, :show])%></a>
+  </div>
+
+</div>
+<hr>
+<div class="row">
+  <div class="col-md-10 col-md-offset-1">
+    <table class="table show-attributes">
+      <tr>
+        <th>
+          <%= I18n.t(:name, scope: [:activerecord, :attributes, :applicant]) %>
+        </th>
+        <td>
+          {{ applicant.name }}
+        </td>
+      </tr>
+      <tr>
+        <th>
+          <%= I18n.t(:phone, scope: [:activerecord, :attributes, :applicant]) %>
+        </th>
+        <td>
+          {{ applicant.phone }}
+        </td>
+      </tr>
+      <tr>
+        <th>
+          <%= I18n.t(:email, scope: [:activerecord, :attributes, :applicant]) %>
+        </th>
+        <td>
+          {{ applicant.email }}
+        </td>
+      </tr>
+      <tr>
+        <th>
+          <%= I18n.t(:is_active, scope: [:activerecord, :attributes, :applicant]) %>
+        </th>
+        <td>
+          {{ applicant.is_active }}
+        </td>
+      </tr>
+      <tr>
+        <th>
+          <%= I18n.t(:salary, scope: [:activerecord, :attributes, :applicant]) %>
+        </th>
+        <td>
+          {{ applicant.salary }}
+        </td>
+      </tr>
+      <tr>
+        <th>
+          <%=I18n.t(:skills, scope: [:applicants, :show])%>
+        </th>
+        <td>
+          <div ui-view="skills_table"></div>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
+<h2><%=I18n.t(:title, scope: [:applicants, :show, :vacancies])%></h2>
+<hr>
+<h3><%=I18n.t(:strict, scope: [:applicants, :show, :vacancies])%></h3>
+<div ui-view="strict_vacancies_table"></div>
+
+<h3><%=I18n.t(:partial, scope: [:applicants, :show, :vacancies])%></h3>
+<div ui-view="partial_vacancies_table"></div>

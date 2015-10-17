@@ -11,5 +11,29 @@ ru:
         is_active: Статус
         salary: Оклад
   applicants:
+    index:
+      title: Соискатели
+      back: На главную
+      new: Новый соискатель
+      confirmation: Вы уверены, что хотите удалить соискателя?
+    show:
+      title: Соискатель
+      back: К списку соискателей
+      edit: Редактировать
+      skills: Имеющиеся навыки
+      vacancies:
+        title: Вакансии, соответствующие имеющимся навыкам
+        strict: Полностью
+        partial: Частично
+    new:
+      title: Новый соискатель
+      back: К списку соискателей
+      submit: Создать
+      cancel: Назад
+    edit:
+      title: Рекдактирование соискателя
+      back: К просмотру соискателя
+      submit: Сохранить
+      cancel: Назад
     table:
       empty: Отстуствуют
