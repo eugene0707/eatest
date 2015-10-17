@@ -6,3 +6,7 @@ ru:
     attributes:
       skill:
         name: Навык
+
+  skills:
+    table:
+      empty: Отстуствуют

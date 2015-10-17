@@ -10,3 +10,6 @@ ru:
         email: Email
         is_active: Статус
         salary: Оклад
+  applicants:
+    table:
+      empty: Отстуствуют

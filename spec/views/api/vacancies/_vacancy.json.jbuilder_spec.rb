@@ -23,7 +23,7 @@ RSpec.describe "_vacancy.json.jbuilder" do
 
     expect(parsed['id']).to eq(vacancy.id)
     expect(parsed['name']).to eq(vacancy.name)
-    expect(parsed['created_at']).to eq(vacancy.created_at.as_json)
+    expect(parsed['created_at']).to eq(vacancy.created_at.to_date.as_json)
     expect(parsed['available_to']).to eq(vacancy.available_to.as_json)
     expect(parsed['salary']).to eq(vacancy.salary)
     expect(parsed['phone']).to eq(vacancy.phone)

@@ -11,6 +11,16 @@
 
 ])
 
+@app.controller("VacanciesShowController", [
+  '$scope'
+  '$stateParams'
+  'VacancyService'
+  ($scope, $stateParams, VacancyService)->
+    $scope.vacancy = VacancyService.show($stateParams.id).then( (data)->
+      $scope.vacancy = data;
+    )
+])
+
 @app.config [
   '$stateProvider'
   ($stateProvider) ->
@@ -23,13 +33,45 @@
 
     .state 'vacancies.index',
       url: ''
-      templateUrl: 'vacancies/index.html'
-      controller: 'VacanciesIndexController'
+      views:
+        '':
+          templateUrl: 'vacancies/index.html'
+          controller: 'VacanciesIndexController'
+        'vacancies_table@vacancies.index':
+          resolve:
+            params: ->
+              items: 'vacancies'
+              editable: 'true'
+          templateUrl: 'shared/vacancies_table.html'
+          controller: 'TableController'
 
     .state 'vacancies.show',
       url: '/{id}'
-      templateUrl: 'vacancies/show.html'
-      controller: 'VacanciesShowController'
+      views:
+        '':
+          templateUrl: 'vacancies/show.html'
+          controller: 'VacanciesShowController'
+        'skills_table@vacancies.show':
+          resolve:
+            params: ->
+              items: 'vacancy.skills'
+              editable: 'false'
+          templateUrl: 'shared/skills_table.html'
+          controller: 'TableController'
+        'strict_applicants_table@vacancies.show':
+          resolve:
+            params: ->
+              items: 'vacancy.strict_applicants'
+              editable: 'false'
+          templateUrl: 'shared/applicants_table.html'
+          controller: 'TableController'
+        'partial_applicants_table@vacancies.show':
+          resolve:
+            params: ->
+              items: 'vacancy.partial_applicants'
+              editable: 'false'
+          templateUrl: 'shared/applicants_table.html'
+          controller: 'TableController'
 
     .state 'vacancies.new',
       url: '/new'

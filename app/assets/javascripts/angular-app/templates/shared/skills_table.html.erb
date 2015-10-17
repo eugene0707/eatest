@@ -1,0 +1,4 @@
+<p ng-if="!items().length"><%= I18n.t(:empty, scope: [:skills, :table]) %></p>
+<div ng-if="items().length">
+  <p ng-repeat="skill in items()">{{ skill.name }}</p>
+</div>

@@ -2,35 +2,10 @@
   <h1 class="col-sm-6"><%= I18n.t(:title, scope: [:vacancies, :index]) %></h1>
 
   <div class="page-actions col-sm-6">
+    <a class="btn btn-link" ui-sref="home"><%=I18n.t(:back, scope: [:vacancies, :index])%></a>
     <a class="btn btn-success" ui-sref="vacancies.new"><span class="glyphicon glyphicon-plus"></span> <%=I18n.t(:new, scope: [:vacancies, :index])%></a>
   </div>
 
 </div>
 <hr>
-<table class="table">
-  <thead>
-  <tr>
-    <th><%= I18n.t(:name, scope: [:activerecord, :attributes, :vacancy]) %></th>
-    <th><%= I18n.t(:created_at, scope: [:activerecord, :attributes, :vacancy]) %></th>
-    <th><%= I18n.t(:available_to, scope: [:activerecord, :attributes, :vacancy]) %></th>
-    <th><%= I18n.t(:salary, scope: [:activerecord, :attributes, :vacancy]) %></th>
-    <th><%= I18n.t(:phone, scope: [:activerecord, :attributes, :vacancy]) %></th>
-    <th><%= I18n.t(:email, scope: [:activerecord, :attributes, :vacancy]) %></th>
-    <th class="actions"></th>
-  </tr>
-  </thead>
-  <tbody>
-    <tr ng-class-odd="'odd'" ng-class-even="'even'" ng-repeat="vacancy in vacancies">
-      <td><a ui-sref="vacancies.show({id:vacancy.id})">{{ vacancy.name }}</a></td>
-      <td>{{ vacancy.created_at }}</td>
-      <td>{{ vacancy.available_to }}</td>
-      <td>{{ vacancy.salary }}</td>
-      <td>{{ vacancy.phone }}</td>
-      <td>{{ vacancy.email }}</td>
-      <td class="actions text-right">
-        <a class="btn btn-primary btn-sm" ui-sref="vacancies.edit({id:vacancy.id})"><span class="glyphicon glyphicon-pencil"></span></a>
-        <a class="btn btn-danger btn-sm" ng-click="delete(vacancy, '<%= I18n.t(:confirmation, scope: [:vacancies, :index]) %>')" ><span class="glyphicon glyphicon-remove"></span></a>
-      </td>
-    </tr>
-  </tbody>
-</table>
+<div ui-view="vacancies_table"></div>

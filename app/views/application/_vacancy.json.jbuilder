@@ -1,1 +1,2 @@
-json.extract! vacancy, :id, :name, :created_at, :available_to, :salary, :phone, :email
+json.extract! vacancy, :id, :name, :available_to, :salary, :phone, :email
+json.created_at vacancy.created_at.to_date

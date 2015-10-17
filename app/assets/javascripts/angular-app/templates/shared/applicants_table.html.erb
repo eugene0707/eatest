@@ -1,0 +1,26 @@
+<h4 ng-if="!items().length"><%= I18n.t(:empty, scope: [:applicants, :table]) %></h4>
+<table class="table" ng-if="items().length">
+  <thead>
+  <tr>
+    <th><%= I18n.t(:name, scope: [:activerecord, :attributes, :applicant]) %></th>
+    <th><%= I18n.t(:phone, scope: [:activerecord, :attributes, :applicant]) %></th>
+    <th><%= I18n.t(:email, scope: [:activerecord, :attributes, :applicant]) %></th>
+    <th><%= I18n.t(:is_active, scope: [:activerecord, :attributes, :applicant]) %></th>
+    <th><%= I18n.t(:salary, scope: [:activerecord, :attributes, :applicant]) %></th>
+    <th ng-if="editable" class="actions"></th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr ng-class-odd="'odd'" ng-class-even="'even'" ng-repeat="applicant in items()">
+    <td><a ui-sref="applicants.show({id:applicant.id})">{{ applicant.name }}</a></td>
+    <td>{{ applicant.phone }}</td>
+    <td>{{ applicant.email }}</td>
+    <td>{{ applicant.is_active }}</td>
+    <td>{{ applicant.salary }}</td>
+    <td ng-if="editable" class="actions text-right">
+      <a class="btn btn-primary btn-sm" ui-sref="applicants.edit({id:applicant.id})"><span class="glyphicon glyphicon-pencil"></span></a>
+      <a class="btn btn-danger btn-sm" ng-click="delete(applicant, '<%= I18n.t(:confirmation, scope: [:applicant, :index]) %>')" ><span class="glyphicon glyphicon-remove"></span></a>
+    </td>
+  </tr>
+  </tbody>
+</table>
