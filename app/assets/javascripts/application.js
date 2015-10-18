@@ -16,7 +16,7 @@
 //= require restangular/dist/restangular
 //= require angular-rails-templates
 //= require angular-resource/angular-resource
-//= require angular-ui-router
+//= require angular-ui-router/release/angular-ui-router
 //= require angular-sanitize/angular-sanitize
 
 //= require angular-bootstrap
