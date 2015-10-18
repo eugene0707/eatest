@@ -12,7 +12,7 @@
 //= require jquery
 //= require angular
 //= require angular-route/angular-route
-//= require lodash
+//= require lodash/lodash
 //= require restangular
 //= require angular-rails-templates
 //= require angular-resource/angular-resource
