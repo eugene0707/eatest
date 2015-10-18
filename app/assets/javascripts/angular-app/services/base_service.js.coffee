@@ -9,9 +9,6 @@
     show: (id) ->
       @restangular.one(@route, id).get()
 
-    getView: (id) ->
-      @restangular.one(@route, id).one(@route + 'view').get()
-
     update: (updatedResource) ->
       updatedResource.put().$object
 

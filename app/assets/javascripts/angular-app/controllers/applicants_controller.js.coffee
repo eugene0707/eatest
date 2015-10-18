@@ -17,7 +17,7 @@
   'ApplicantService'
   ($scope, $stateParams, ApplicantService)->
     $scope.applicant = ApplicantService.show($stateParams.id).then( (data)->
-      $scope.applicant = data;
+      $scope.applicant = data
     )
 ])
 
@@ -26,8 +26,9 @@
   '$state'
   'ApplicantService'
   ($scope, $state, ApplicantService)->
+
     $scope.save=->
-      ApplicantService.create(applicant: $scope.applicant).then(->
+      ApplicantService.create(applicant: $scope.object).then(->
         $state.transitionTo('applicants.index')
       )
 ])
@@ -38,12 +39,17 @@
   '$state'
   'ApplicantService'
   ($scope, $stateParams, $state, ApplicantService)->
-    $scope.applicant = ApplicantService.show($stateParams.id).then( (data)->
-      $scope.applicant = data
+    $scope.object = ApplicantService.show($stateParams.id).then( (data)->
+      $scope.object = data
+      $scope.object.skill_ids = data.skills.map((val)-> val.id)
+      delete $scope.object.skills
     )
 
     $scope.save=->
-      $scope.applicant.put().then(->
+      $scope.object.applicant =
+        skill_ids: $scope.object.skill_ids
+
+      $scope.object.put().then(->
         $state.transitionTo('applicants.show', id: $stateParams.id)
       )
 ])
@@ -80,6 +86,9 @@
           controller: 'ApplicantsNewController'
         'form@applicants.new':
           templateUrl: 'applicants/form.html'
+        'skills@applicants.new':
+          templateUrl: 'skills/skills_nested.html'
+          controller: 'SkillsNestedController'
 
     .state 'applicants.show',
       url: '/{id}'
@@ -117,5 +126,8 @@
           controller: 'ApplicantsEditController'
         'form@applicants.edit':
           templateUrl: 'applicants/form.html'
+        'skills@applicants.edit':
+          templateUrl: 'skills/skills_nested.html'
+          controller: 'SkillsNestedController'
 
 ]

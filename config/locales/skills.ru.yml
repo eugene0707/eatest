@@ -8,5 +8,7 @@ ru:
         name: Навык
 
   skills:
+    index:
+      confirmation: Вы уверены, что хотите удалить навык?
     table:
       empty: Отстуствуют

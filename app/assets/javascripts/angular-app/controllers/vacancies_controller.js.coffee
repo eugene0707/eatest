@@ -26,8 +26,9 @@
   '$state'
   'VacancyService'
   ($scope, $state, VacancyService)->
+
     $scope.save=->
-      VacancyService.create(vacancy: $scope.vacancy).then(->
+      VacancyService.create(vacancy: $scope.object).then(->
         $state.transitionTo('vacancies.index')
       )
 ])
@@ -38,13 +39,19 @@
   '$state'
   'VacancyService'
   ($scope, $stateParams, $state, VacancyService)->
-    $scope.vacancy = VacancyService.show($stateParams.id).then( (data)->
-      $scope.vacancy = data
-      $scope.vacancy.available_to = new Date(new Date($scope.vacancy.available_to).getTime() - (new Date()).getTimezoneOffset()*60000)
+
+    $scope.object = VacancyService.show($stateParams.id).then( (data)->
+      $scope.object = data
+      $scope.object.available_to = new Date(new Date($scope.object.available_to).getTime() - (new Date()).getTimezoneOffset()*60000)
+      $scope.object.skill_ids = data.skills.map((val)-> val.id)
+      delete $scope.object.skills
     )
 
     $scope.save=->
-      $scope.vacancy.put().then(->
+      $scope.object.vacancy =
+        skill_ids: $scope.object.skill_ids
+
+      $scope.object.put().then(->
         $state.transitionTo('vacancies.show', id: $stateParams.id)
       )
 ])
@@ -81,6 +88,9 @@
           controller: 'VacanciesNewController'
         'form@vacancies.new':
           templateUrl: 'vacancies/form.html'
+        'skills@vacancies.new':
+          templateUrl: 'skills/skills_nested.html'
+          controller: 'SkillsNestedController'
 
     .state 'vacancies.show',
       url: '/{id}'
@@ -118,5 +128,8 @@
           controller: 'VacanciesEditController'
         'form@vacancies.edit':
           templateUrl: 'vacancies/form.html'
+        'skills@vacancies.edit':
+          templateUrl: 'skills/skills_nested.html'
+          controller: 'SkillsNestedController'
 
 ]
