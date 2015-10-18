@@ -15,11 +15,16 @@
     <td><a ui-sref="applicants.show({id:applicant.id})">{{ applicant.name }}</a></td>
     <td>{{ applicant.phone }}</td>
     <td>{{ applicant.email }}</td>
-    <td>{{ applicant.is_active }}</td>
+    <td ng-if="!applicant.is_active">
+      <%= I18n.t(:is_active, scope: [:applicants])[0] %>
+    </td>
+    <td ng-if="applicant.is_active">
+      <%= I18n.t(:is_active, scope: [:applicants])[1] %>
+    </td>
     <td>{{ applicant.salary }}</td>
     <td ng-if="editable" class="actions text-right">
       <a class="btn btn-primary btn-sm" ui-sref="applicants.edit({id:applicant.id})"><span class="glyphicon glyphicon-pencil"></span></a>
-      <a class="btn btn-danger btn-sm" ng-click="delete(applicant, '<%= I18n.t(:confirmation, scope: [:applicant, :index]) %>')" ><span class="glyphicon glyphicon-remove"></span></a>
+      <a class="btn btn-danger btn-sm" ng-click="delete(applicant, '<%= I18n.t(:confirmation, scope: [:applicants, :index]) %>')" ><span class="glyphicon glyphicon-remove"></span></a>
     </td>
   </tr>
   </tbody>

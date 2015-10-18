@@ -39,8 +39,11 @@
         <th>
           <%= I18n.t(:is_active, scope: [:activerecord, :attributes, :applicant]) %>
         </th>
-        <td>
-          {{ applicant.is_active }}
+        <td ng-if="!applicant.is_active">
+          <%= I18n.t(:is_active, scope: [:applicants])[0] %>
+        </td>
+        <td ng-if="applicant.is_active">
+          <%= I18n.t(:is_active, scope: [:applicants])[1] %>
         </td>
       </tr>
       <tr>

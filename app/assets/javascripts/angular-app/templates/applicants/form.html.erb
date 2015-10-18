@@ -1,0 +1,47 @@
+<div class="row">
+  <form class="form-horizontal">
+    <div class="form-group">
+      <label for="input_name" class="col-sm-4 control-label"><%= I18n.t(:name, scope: [:activerecord, :attributes, :applicant]) %></label>
+      <div class="col-sm-6">
+        <input type="text" class="form-control" id="input_name" name="name" ng-model="$parent.applicant.name" placeholder="<%= I18n.t(:name, scope: [:activerecord, :attributes, :applicant]) %>">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="input_is_active" class="col-sm-4 control-label"><%= I18n.t(:is_active, scope: [:activerecord, :attributes, :applicant]) %></label>
+      <div class="col-sm-6">
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" id="input_is_active" name="is_active"
+                   ng-model="$parent.applicant.is_active"
+                   ng-true-value="1"
+                   ng-false-value="0">
+          </label>
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="input_salary" class="col-sm-4 control-label"><%= I18n.t(:salary, scope: [:activerecord, :attributes, :applicant]) %></label>
+      <div class="col-sm-6">
+        <input type="number" class="form-control" id="input_salary" name="salary" ng-model="$parent.applicant.salary" placeholder="<%= I18n.t(:salary, scope: [:activerecord, :attributes, :applicant]) %>">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="input_phone" class="col-sm-4 control-label"><%= I18n.t(:phone, scope: [:activerecord, :attributes, :applicant]) %></label>
+      <div class="col-sm-6">
+        <input type="tel" class="form-control" id="input_phone" name="phone" ng-model="$parent.applicant.phone" placeholder="<%= I18n.t(:phone, scope: [:activerecord, :attributes, :applicant]) %>">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="input_email" class="col-sm-4 control-label"><%= I18n.t(:email, scope: [:activerecord, :attributes, :applicant]) %></label>
+      <div class="col-sm-6">
+        <input type="email" class="form-control" id="input_email" name="email" ng-model="$parent.applicant.email" placeholder="<%= I18n.t(:email, scope: [:activerecord, :attributes, :applicant]) %>">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="input_skills" class="col-sm-4 control-label"><%=I18n.t(:skills, scope: [:applicants, :show])%></label>
+      <div class="col-sm-6">
+        <div ui-view="skills"></div>
+      </div>
+    </div>
+  </form>
+</div>

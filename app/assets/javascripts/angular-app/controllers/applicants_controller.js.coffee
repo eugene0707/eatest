@@ -21,6 +21,33 @@
     )
 ])
 
+@app.controller("ApplicantsNewController", [
+  '$scope'
+  '$state'
+  'ApplicantService'
+  ($scope, $state, ApplicantService)->
+    $scope.save=->
+      ApplicantService.create(applicant: $scope.applicant).then(->
+        $state.transitionTo('applicants.index')
+      )
+])
+
+@app.controller("ApplicantsEditController", [
+  '$scope'
+  '$stateParams'
+  '$state'
+  'ApplicantService'
+  ($scope, $stateParams, $state, ApplicantService)->
+    $scope.applicant = ApplicantService.show($stateParams.id).then( (data)->
+      $scope.applicant = data
+    )
+
+    $scope.save=->
+      $scope.applicant.put().then(->
+        $state.transitionTo('applicants.show', id: $stateParams.id)
+      )
+])
+
 @app.config [
   '$stateProvider'
   ($stateProvider) ->
@@ -44,6 +71,15 @@
               editable: 'true'
           templateUrl: 'shared/applicants_table.html'
           controller: 'TableController'
+
+    .state 'applicants.new',
+      url: '/new'
+      views:
+        '':
+          templateUrl: 'applicants/new.html'
+          controller: 'ApplicantsNewController'
+        'form@applicants.new':
+          templateUrl: 'applicants/form.html'
 
     .state 'applicants.show',
       url: '/{id}'
@@ -73,14 +109,13 @@
           templateUrl: 'shared/vacancies_table.html'
           controller: 'TableController'
 
-    .state 'applicants.new',
-      url: '/new'
-      templateUrl: 'applicants/new.html'
-      controller: 'ApplicantsNewController'
-
     .state 'applicants.edit',
       url: '/{id}/edit'
-      templateUrl: 'applicants/edit.html'
-      controller: 'ApplicantsEditController'
+      views:
+        '':
+          templateUrl: 'applicants/edit.html'
+          controller: 'ApplicantsEditController'
+        'form@applicants.edit':
+          templateUrl: 'applicants/form.html'
 
 ]

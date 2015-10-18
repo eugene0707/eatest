@@ -8,9 +8,13 @@ ru:
         name: Имя
         phone: Телефон
         email: Email
-        is_active: Статус
+        is_active: Ищет работу
         salary: Оклад
+
   applicants:
+    is_active:
+      1: Да
+      0: Нет
     index:
       title: Соискатели
       back: На главную

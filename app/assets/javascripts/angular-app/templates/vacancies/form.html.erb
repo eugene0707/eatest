@@ -21,7 +21,7 @@
     <div class="form-group">
       <label for="input_phone" class="col-sm-4 control-label"><%= I18n.t(:phone, scope: [:activerecord, :attributes, :vacancy]) %></label>
       <div class="col-sm-6">
-        <input type="tel" class="form-control" id="input_salary" name="phone" ng-model="$parent.vacancy.phone" placeholder="<%= I18n.t(:phone, scope: [:activerecord, :attributes, :vacancy]) %>">
+        <input type="tel" class="form-control" id="input_phone" name="phone" ng-model="$parent.vacancy.phone" placeholder="<%= I18n.t(:phone, scope: [:activerecord, :attributes, :vacancy]) %>">
       </div>
     </div>
     <div class="form-group">
@@ -33,7 +33,7 @@
     <div class="form-group">
       <label for="input_skills" class="col-sm-4 control-label"><%=I18n.t(:skills, scope: [:vacancies, :show])%></label>
       <div class="col-sm-6">
-
+        <div ui-view="skills"></div>
       </div>
     </div>
   </form>
