@@ -54,8 +54,8 @@
         name: $scope.object.name
         available_to: $scope.object.available_to
         salary: $scope.object.salary
-        phone: $scope.object.phone
-        email: $scope.object.email
+        phone: if $scope.object.phone then $scope.object.phone else null
+        email: if $scope.object.email then $scope.object.email else null
         skill_ids: $scope.object.skill_ids
 
       $scope.object.put().then(->

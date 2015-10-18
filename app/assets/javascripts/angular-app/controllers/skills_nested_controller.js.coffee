@@ -19,7 +19,8 @@
       )
 
     $scope.update_skill=->
-      $scope.nested_skill.name = $scope.skill_name
+      $scope.nested_skill.skill=
+        name: $scope.skill_name
       $scope.nested_skill.put().then(->
         $scope.skill_name = null
         delete $scope.nested_skill
