@@ -1,0 +1,13 @@
+<div class="row">
+  <h1 class="col-sm-6"><%= I18n.t(:title, scope: [:vacancies, :new]) %></h1>
+
+  <div class="page-actions col-sm-6">
+    <a class="btn btn-link" ui-sref="vacancies.index"><%=I18n.t(:back, scope: [:vacancies, :new])%></a>
+    <a class="btn btn-primary" ng-click="save()"><span class="glyphicon glyphicon-ok"></span> <%=I18n.t(:submit, scope: [:vacancies, :new])%></a>
+  </div>
+
+</div>
+<hr>
+<p>{{ vacancy.name }}</p>
+
+<div ui-view="form"></div>
