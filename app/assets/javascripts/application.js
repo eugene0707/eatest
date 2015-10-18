@@ -13,7 +13,7 @@
 //= require angular
 //= require angular-route/angular-route
 //= require lodash/lodash
-//= require restangular
+//= require restangular/dist/restangular
 //= require angular-rails-templates
 //= require angular-resource/angular-resource
 //= require angular-ui-router
