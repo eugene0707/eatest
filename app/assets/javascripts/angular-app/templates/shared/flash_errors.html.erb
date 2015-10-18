@@ -1,0 +1,9 @@
+<div ng-if="flash_message.errors" class="alert alert-danger">
+  <div class="close" >
+    <button type="button" class="close" ng-click="flash_message.errors=''">&times;</button>
+  </div>
+  <p ng-repeat="(key, value) in flash_message.errors">
+    <strong>{{ key }}:</strong>
+    {{ value.toString() }}
+  </p>
+</div>

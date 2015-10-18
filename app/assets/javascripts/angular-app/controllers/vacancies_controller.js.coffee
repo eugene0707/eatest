@@ -30,6 +30,8 @@
     $scope.save=->
       VacancyService.create(vacancy: $scope.object).then(->
         $state.transitionTo('vacancies.index')
+      ,(error)->
+        $scope.flash_message={errors: error.data}
       )
 ])
 
@@ -49,10 +51,17 @@
 
     $scope.save=->
       $scope.object.vacancy =
+        name: $scope.object.name
+        available_to: $scope.object.available_to
+        salary: $scope.object.salary
+        phone: $scope.object.phone
+        email: $scope.object.email
         skill_ids: $scope.object.skill_ids
 
       $scope.object.put().then(->
         $state.transitionTo('vacancies.show', id: $stateParams.id)
+      ,(error)->
+        $scope.flash_message={errors: error.data}
       )
 ])
 
@@ -86,6 +95,8 @@
         '':
           templateUrl: 'vacancies/new.html'
           controller: 'VacanciesNewController'
+        'flash@vacancies.new':
+          templateUrl: 'shared/flash_errors.html'
         'form@vacancies.new':
           templateUrl: 'vacancies/form.html'
         'skills@vacancies.new':
@@ -126,6 +137,8 @@
         '':
           templateUrl: 'vacancies/edit.html'
           controller: 'VacanciesEditController'
+        'flash@vacancies.edit':
+          templateUrl: 'shared/flash_errors.html'
         'form@vacancies.edit':
           templateUrl: 'vacancies/form.html'
         'skills@vacancies.edit':
