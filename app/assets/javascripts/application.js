@@ -22,8 +22,8 @@
 //= require angular-bootstrap
 //= require bootstrap-sprockets
 
-//= require angular-app/app
+//= require ./angular-app/app
 //= require_tree ./angular-app/templates
 //= require_tree ./angular-app/services
 //= require_tree ./angular-app/controllers
-//= require angular-app/routes
+//= require ./angular-app/routes
