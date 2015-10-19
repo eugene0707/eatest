@@ -17,7 +17,7 @@
   "requests": [
     {
       "request_method": "GET",
-      "request_path": "/api/applicants/1498",
+      "request_path": "/api/applicants/564",
       "request_body": null,
       "request_headers": {
         "Host": "example.org",
@@ -28,17 +28,18 @@
       "request_content_type": null,
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"id\": 1498,\n  \"name\": \"Иванов Иван Отчествор\",\n  \"phone\": \"+7(495)123-4567\",\n  \"email\": \"user@example.com\",\n  \"is_active\": 1,\n  \"salary\": 100,\n  \"skills\": [\n    {\n      \"id\": 3935,\n      \"name\": \"Skill 4\"\n    },\n    {\n      \"id\": 3936,\n      \"name\": \"Skill 5\"\n    }\n  ],\n  \"strict_vacancies\": [\n    {\n      \"id\": 1775,\n      \"name\": \"Vacancy 3\",\n      \"created_at\": \"2015-10-15T01:18:08.581Z\",\n      \"available_to\": \"2015-10-16\",\n      \"salary\": 100,\n      \"phone\": \"+7(495)123-4567\",\n      \"email\": \"user@example.com\"\n    }\n  ],\n  \"partial_vacancies\": [\n    {\n      \"id\": 1776,\n      \"name\": \"Vacancy 4\",\n      \"created_at\": \"2015-10-15T01:18:08.591Z\",\n      \"available_to\": \"2015-10-16\",\n      \"salary\": 100,\n      \"phone\": \"+7(495)123-4567\",\n      \"email\": \"user@example.com\"\n    }\n  ]\n}",
+      "response_body": "{\n  \"id\": 564,\n  \"name\": \"Иванов Иван Отчествоъ\",\n  \"phone\": \"+7(495)123-4567\",\n  \"email\": \"user@example.com\",\n  \"is_active\": 1,\n  \"salary\": 100,\n  \"skills\": [\n    {\n      \"id\": 754,\n      \"name\": \"Skill 4\"\n    },\n    {\n      \"id\": 755,\n      \"name\": \"Skill 5\"\n    }\n  ],\n  \"strict_vacancies\": [\n    {\n      \"id\": 551,\n      \"name\": \"Vacancy 3\",\n      \"available_to\": \"2015-10-20\",\n      \"salary\": 100,\n      \"phone\": \"+7(495)123-4567\",\n      \"email\": \"user@example.com\",\n      \"created_at\": \"2015-10-19\"\n    }\n  ],\n  \"partial_vacancies\": [\n    {\n      \"id\": 552,\n      \"name\": \"Vacancy 4\",\n      \"available_to\": \"2015-10-20\",\n      \"salary\": 100,\n      \"phone\": \"+7(495)123-4567\",\n      \"email\": \"user@example.com\",\n      \"created_at\": \"2015-10-19\"\n    }\n  ]\n}",
       "response_headers": {
         "X-Frame-Options": "SAMEORIGIN",
         "X-XSS-Protection": "1; mode=block",
         "X-Content-Type-Options": "nosniff",
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "W/\"fab620ce50ff22774f21c19dfabe1e20\"",
+        "Vary": "Origin",
+        "ETag": "W/\"7b5e938e3b7be44cfbc3c6f2a61fa6b0\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "0b076c47-5f71-4146-8f06-54312cf16072",
-        "X-Runtime": "0.075997",
-        "Content-Length": "583"
+        "X-Request-Id": "700e4970-dac6-47ea-887e-5860d99cbd35",
+        "X-Runtime": "0.040703",
+        "Content-Length": "550"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null

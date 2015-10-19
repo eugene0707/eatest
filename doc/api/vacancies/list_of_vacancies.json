@@ -24,17 +24,18 @@
       "request_content_type": null,
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "[\n  {\n    \"id\": 1783,\n    \"name\": \"Vacancy 11\",\n    \"created_at\": \"2015-10-15T01:18:09.161Z\",\n    \"available_to\": \"2015-10-16\",\n    \"salary\": 100,\n    \"phone\": \"+7(495)123-4567\",\n    \"email\": \"user@example.com\"\n  },\n  {\n    \"id\": 1784,\n    \"name\": \"Vacancy 12\",\n    \"created_at\": \"2015-10-15T01:18:09.171Z\",\n    \"available_to\": \"2015-10-16\",\n    \"salary\": 100,\n    \"phone\": \"+7(495)123-4567\",\n    \"email\": \"user@example.com\"\n  }\n]",
+      "response_body": "[\n  {\n    \"id\": 559,\n    \"name\": \"Vacancy 11\",\n    \"available_to\": \"2015-10-20\",\n    \"salary\": 100,\n    \"phone\": \"+7(495)123-4567\",\n    \"email\": \"user@example.com\",\n    \"created_at\": \"2015-10-19\"\n  },\n  {\n    \"id\": 560,\n    \"name\": \"Vacancy 12\",\n    \"available_to\": \"2015-10-20\",\n    \"salary\": 100,\n    \"phone\": \"+7(495)123-4567\",\n    \"email\": \"user@example.com\",\n    \"created_at\": \"2015-10-19\"\n  }\n]",
       "response_headers": {
         "X-Frame-Options": "SAMEORIGIN",
         "X-XSS-Protection": "1; mode=block",
         "X-Content-Type-Options": "nosniff",
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "W/\"d2f6baee443e55b7af38cbcc102c4433\"",
+        "Vary": "Origin",
+        "ETag": "W/\"e6e7fa1d222c0006449d74d140c3ccaa\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "bcc64608-6e68-4a02-8019-bccb49b8d64f",
-        "X-Runtime": "0.022121",
-        "Content-Length": "333"
+        "X-Request-Id": "b9ac40f9-ef93-4745-8b11-8a050074c9a6",
+        "X-Runtime": "0.017574",
+        "Content-Length": "303"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null

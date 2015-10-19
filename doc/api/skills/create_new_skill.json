@@ -29,18 +29,18 @@
       "request_content_type": "application/x-www-form-urlencoded",
       "response_status": 201,
       "response_status_text": "Created",
-      "response_body": "{\n  \"id\": 3953,\n  \"name\": \"Skill 22\"\n}",
+      "response_body": "{\n  \"id\": 772,\n  \"name\": \"Skill 22\"\n}",
       "response_headers": {
         "X-Frame-Options": "SAMEORIGIN",
         "X-XSS-Protection": "1; mode=block",
         "X-Content-Type-Options": "nosniff",
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "W/\"f855f87ba4b22a28dac0e98f3462027a\"",
+        "Vary": "Origin",
+        "ETag": "W/\"be4c95802d85f92572b8634612a8410c\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "Set-Cookie": "request_method=POST; path=/",
-        "X-Request-Id": "4048bf38-1250-48f0-b108-f496668c5a81",
-        "X-Runtime": "0.016561",
-        "Content-Length": "29"
+        "X-Request-Id": "2971dabf-9f49-4c5b-9458-1abd24e07f5d",
+        "X-Runtime": "0.004329",
+        "Content-Length": "28"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null

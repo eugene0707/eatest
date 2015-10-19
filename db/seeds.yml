@@ -1,0 +1,140 @@
+skills:
+  skill_1:
+    name: CSS3
+  skill_2:
+    name: AngularJS
+  skill_3:
+    name: Ruby-On-Rails
+  skill_4:
+    name: Capistrano
+  skill_5:
+    name: Agile Scrum
+
+vacancies:
+  vacancy_1:
+    name: 'Web-разработчик'
+    available_to: 7
+    salary: 95000
+    email: 'vacancy1@example.com'
+    phone: '+7(495)111-1111'
+    skill_ids: [1, 2, 5]
+  vacancy_2:
+    name: 'Программист-верстальщик'
+    available_to: 7
+    salary: 50000
+    phone: '+7(495)222-2222'
+    skill_ids: [1, 5]
+  vacancy_3:
+    name: 'Администратор сайта'
+    available_to: 14
+    salary: 100000
+    email: 'vacancy3@example.com'
+    skill_ids: [3, 4]
+  vacancy_4:
+    name: 'Разработчик Ruby on Rails'
+    available_to: 7
+    salary: 60000
+    phone: '+7(495)444-4444'
+    skill_ids: [3, 4, 5]
+  vacancy_5:
+    name: 'Backend разработчик'
+    available_to: 10
+    salary: 120000
+    email: 'vacancy5@example.com'
+    phone: '+7(495)555-5555'
+    skill_ids: [2, 3, 4]
+  vacancy_6:
+    name: 'Системный администратор'
+    available_to: 21
+    salary: 100000
+    phone: '+7(495)666-6666'
+    skill_ids: [2, 4]
+  vacancy_7:
+    name: 'DevOps Инженер'
+    available_to: 1
+    salary: 110000
+    email: 'vacancy7@example.com'
+    skill_ids: [2, 3, 4, 5]
+  vacancy_8:
+    name: 'Ведущий программист'
+    available_to: 7
+    salary: 150000
+    phone: '+7(495)888-8888'
+    skill_ids: [1, 2, 3, 4, 5]
+  vacancy_9:
+    name: 'CI Engineer'
+    available_to: 1
+    salary: 80000
+    email: 'vacancy9@example.com'
+    skill_ids: [4]
+  vacancy_10:
+    name: 'Разработчик-автоматизатор'
+    available_to: 14
+    salary: 130000
+    phone: '+7(495)1234567'
+    skill_ids: [2, 3]
+
+applicants:
+  applicant_1:
+    name: 'Аксенов Антон Сергеевич'
+    is_active: 1
+    salary: 105000
+    email: 'applicant1@example.com'
+    phone: '+7(495)111-1111'
+    skill_ids: [1, 2, 5]
+  applicant_2:
+    name: 'Алексеев Кирилл Александрович'
+    is_active: 1
+    salary: 60000
+    phone: '+7(495)222-2222'
+    skill_ids: [1, 5]
+  applicant_3:
+    name: 'Андреев Юрий Александрович'
+    is_active: 1
+    salary: 110000
+    email: 'applicant3@example.com'
+    skill_ids: [3, 4]
+  applicant_4:
+    name: 'Васильев Евгений Андреевич'
+    is_active: 1
+    salary: 70000
+    phone: '+7(495)444-4444'
+    skill_ids: [3, 4, 5]
+  applicant_5:
+    name: 'Ветров Андрей Юрьевич'
+    is_active: 0
+    salary: 130000
+    email: 'applicant5@example.com'
+    phone: '+7(495)555-5555'
+    skill_ids: [2, 3, 4]
+  applicant_6:
+    name: 'Караваев Дмитрий Игоревич'
+    is_active: 0
+    salary: 110000
+    phone: '+7(495)666-6666'
+    skill_ids: [2, 4]
+  applicant_7:
+    name: 'Королев Александр Николаевич'
+    is_active: 1
+    salary: 120000
+    email: 'applicant7@example.com'
+    skill_ids: [2, 3, 4, 5]
+  applicant_8:
+    name: 'Титов Алексей Викторович'
+    is_active: 1
+    salary: 140000
+    phone: '+7(495)888-8888'
+    skill_ids: [1, 2, 3, 4, 5]
+  applicant_9:
+    name: 'Трушин Владимир Игоревич'
+    is_active: 1
+    salary: 90000
+    email: 'applicant9@example.com'
+    skill_ids: [4]
+  applicant_10:
+    name: 'Чернов Андрей Павлович'
+    is_active: 1
+    salary: 150000
+    phone: '+7(495)1234567'
+    skill_ids: [2, 3]
+

@@ -14,12 +14,18 @@
 
 class Vacancy < ActiveRecord::Base
   has_and_belongs_to_many :skills
-  has_many :applicants, -> { group(Applicant.column_names).having('COUNT("applicants_skills".*)>0') },
+  has_many :applicants, -> {  active.group(Applicant.column_names)
+                              .having('COUNT("applicants_skills".*)>0')
+                              .by_salary},
            through: :skills
-  has_many :strict_applicants, -> (vacancy) { group(Applicant.column_names).having('COUNT("applicants_skills".*)=?', vacancy.skill_ids.size) },
+  has_many :strict_applicants, -> (vacancy) { active.group(Applicant.column_names)
+                                              .having('COUNT("applicants_skills".*)=?', vacancy.skill_ids.size)
+                                              .by_salary},
            through: :skills,
            source: :applicants
-  has_many :partial_applicants, -> (vacancy) { group(Applicant.column_names).having('COUNT("applicants_skills".*)<?', vacancy.skill_ids.size) },
+  has_many :partial_applicants, -> (vacancy) {  active.group(Applicant.column_names)
+                                                .having('COUNT("applicants_skills".*)<?', vacancy.skill_ids.size)
+                                                .by_salary},
            through: :skills,
            source: :applicants
 
@@ -27,6 +33,7 @@ class Vacancy < ActiveRecord::Base
   validates_presence_of :phone, unless: :email
   validates_presence_of :email, unless: :phone
 
+  validates :salary, numericality: { only_integer: true, greater_than: 0 }
   validates :phone, phone: true, allow_nil: true
   validates :email, email: true, allow_nil: true
 

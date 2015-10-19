@@ -24,17 +24,18 @@
       "request_content_type": null,
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "[\n  {\n    \"id\": 1496,\n    \"name\": \"Иванов Иван Отчествот\",\n    \"phone\": \"+7(495)123-4567\",\n    \"email\": \"user@example.com\",\n    \"is_active\": 1,\n    \"salary\": 100\n  },\n  {\n    \"id\": 1497,\n    \"name\": \"Иванов Иван Отчествоц\",\n    \"phone\": \"+7(495)123-4567\",\n    \"email\": \"user@example.com\",\n    \"is_active\": 1,\n    \"salary\": 100\n  }\n]",
+      "response_body": "[\n  {\n    \"id\": 562,\n    \"name\": \"Иванов Иван Отчествок\",\n    \"phone\": \"+7(495)123-4567\",\n    \"email\": \"user@example.com\",\n    \"is_active\": 1,\n    \"salary\": 100\n  },\n  {\n    \"id\": 563,\n    \"name\": \"Иванов Иван Отчествог\",\n    \"phone\": \"+7(495)123-4567\",\n    \"email\": \"user@example.com\",\n    \"is_active\": 1,\n    \"salary\": 100\n  }\n]",
       "response_headers": {
         "X-Frame-Options": "SAMEORIGIN",
         "X-XSS-Protection": "1; mode=block",
         "X-Content-Type-Options": "nosniff",
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "W/\"c1a531996be28ac16849feab0832ec09\"",
+        "Vary": "Origin",
+        "ETag": "W/\"7dbf46e1437c4977342ebc8f4a00a515\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "533576a5-0c9b-4ada-b9ce-93159289efd5",
-        "X-Runtime": "0.066075",
-        "Content-Length": "285"
+        "X-Request-Id": "64cd1d06-e3c9-459d-bedb-b7eefc4f9779",
+        "X-Runtime": "0.091857",
+        "Content-Length": "283"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null

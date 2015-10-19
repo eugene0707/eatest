@@ -20,6 +20,7 @@ class Applicant < ActiveRecord::Base
   validates_presence_of :email, unless: :phone
 
   validates :name, russian_name: true
+  validates :salary, numericality: { only_integer: true, greater_than: 0 }
   validates :phone, phone: true, allow_nil: true
   validates :email, email: true, allow_nil: true
   validates :is_active, inclusion: { in: [0, 1] }

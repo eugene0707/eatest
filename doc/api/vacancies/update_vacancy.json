@@ -22,8 +22,8 @@
   "requests": [
     {
       "request_method": "PUT",
-      "request_path": "/api/vacancies/1790",
-      "request_body": "vacancy[name]=Vacancy+20&vacancy[available_to]=2015-10-16+01%3A18%3A09+UTC&vacancy[salary]=100&vacancy[phone]=%2B7%28495%29123-4567&vacancy[email]=user%40example.com&vacancy[skill_ids][]=3964&vacancy[skill_ids][]=3965",
+      "request_path": "/api/vacancies/566",
+      "request_body": "vacancy[name]=Vacancy+20&vacancy[available_to]=2015-10-20+03%3A31%3A06+UTC&vacancy[salary]=100&vacancy[phone]=%2B7%28495%29123-4567&vacancy[email]=user%40example.com&vacancy[skill_ids][]=783&vacancy[skill_ids][]=784",
       "request_headers": {
         "Host": "example.org",
         "Content-Type": "application/x-www-form-urlencoded",
@@ -34,18 +34,18 @@
       "request_content_type": "application/x-www-form-urlencoded",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"id\": 1790,\n  \"name\": \"Vacancy 20\",\n  \"created_at\": \"2015-10-15T01:18:09.531Z\",\n  \"available_to\": \"2015-10-16\",\n  \"salary\": 100,\n  \"phone\": \"+7(495)123-4567\",\n  \"email\": \"user@example.com\",\n  \"skills\": [\n    {\n      \"id\": 3964,\n      \"name\": \"Skill 34\"\n    },\n    {\n      \"id\": 3965,\n      \"name\": \"Skill 35\"\n    }\n  ],\n  \"strict_applicants\": [\n    {\n      \"id\": 1513,\n      \"name\": \"Иванов Иван Отчествоэ\",\n      \"phone\": \"+7(495)123-4567\",\n      \"email\": \"user@example.com\",\n      \"is_active\": 1,\n      \"salary\": 100\n    }\n  ],\n  \"partial_applicants\": [\n    {\n      \"id\": 1514,\n      \"name\": \"Иванов Иван Отчествок\",\n      \"phone\": \"+7(495)123-4567\",\n      \"email\": \"user@example.com\",\n      \"is_active\": 1,\n      \"salary\": 100\n    }\n  ]\n}",
+      "response_body": "{\n  \"id\": 566,\n  \"name\": \"Vacancy 20\",\n  \"available_to\": \"2015-10-20\",\n  \"salary\": 100,\n  \"phone\": \"+7(495)123-4567\",\n  \"email\": \"user@example.com\",\n  \"created_at\": \"2015-10-19\",\n  \"skills\": [\n    {\n      \"id\": 783,\n      \"name\": \"Skill 34\"\n    },\n    {\n      \"id\": 784,\n      \"name\": \"Skill 35\"\n    }\n  ],\n  \"strict_applicants\": [\n    {\n      \"id\": 579,\n      \"name\": \"Иванов Иван Отчествоъ\",\n      \"phone\": \"+7(495)123-4567\",\n      \"email\": \"user@example.com\",\n      \"is_active\": 1,\n      \"salary\": 100\n    }\n  ],\n  \"partial_applicants\": [\n    {\n      \"id\": 580,\n      \"name\": \"Иванов Иван Отчествоы\",\n      \"phone\": \"+7(495)123-4567\",\n      \"email\": \"user@example.com\",\n      \"is_active\": 1,\n      \"salary\": 100\n    }\n  ]\n}",
       "response_headers": {
         "X-Frame-Options": "SAMEORIGIN",
         "X-XSS-Protection": "1; mode=block",
         "X-Content-Type-Options": "nosniff",
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "W/\"d3c70befbde86cdfdccf6adc4f6aecd6\"",
+        "Vary": "Origin",
+        "ETag": "W/\"3dcf640836d450124177a74f421a38c2\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "Set-Cookie": "request_method=PUT; path=/",
-        "X-Request-Id": "7815d2f6-31ab-414d-9aa6-6b55007c245e",
-        "X-Runtime": "0.045362",
-        "Content-Length": "565"
+        "X-Request-Id": "d5bd542f-ca20-4e08-9f12-d19ada01599f",
+        "X-Runtime": "0.020147",
+        "Content-Length": "546"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null

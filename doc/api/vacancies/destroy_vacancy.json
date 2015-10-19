@@ -17,7 +17,7 @@
   "requests": [
     {
       "request_method": "DELETE",
-      "request_path": "/api/vacancies/1792",
+      "request_path": "/api/vacancies/568",
       "request_body": null,
       "request_headers": {
         "Host": "example.org",
@@ -34,10 +34,10 @@
         "X-Frame-Options": "SAMEORIGIN",
         "X-XSS-Protection": "1; mode=block",
         "X-Content-Type-Options": "nosniff",
+        "Vary": "Origin",
         "Cache-Control": "no-cache",
-        "Set-Cookie": "request_method=DELETE; path=/",
-        "X-Request-Id": "cea5896c-bc79-4d66-83b0-c6cb6e84e3cc",
-        "X-Runtime": "0.011002"
+        "X-Request-Id": "42891e10-4397-4d4b-8d17-96ed521b2d03",
+        "X-Runtime": "0.005592"
       },
       "response_content_type": null,
       "curl": null

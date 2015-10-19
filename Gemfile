@@ -68,3 +68,5 @@ gem 'sprockets', '2.12.4'
 gem 'angular-rails-templates', '~> 0.1.5'
 gem 'bower-rails'
 gem 'bootstrap-sass'
+
+gem 'rack-cors'

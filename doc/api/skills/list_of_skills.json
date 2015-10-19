@@ -24,17 +24,18 @@
       "request_content_type": null,
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "[\n  {\n    \"id\": 3947,\n    \"name\": \"Skill 16\"\n  },\n  {\n    \"id\": 3948,\n    \"name\": \"Skill 17\"\n  }\n]",
+      "response_body": "[\n  {\n    \"id\": 766,\n    \"name\": \"Skill 16\"\n  },\n  {\n    \"id\": 767,\n    \"name\": \"Skill 17\"\n  }\n]",
       "response_headers": {
         "X-Frame-Options": "SAMEORIGIN",
         "X-XSS-Protection": "1; mode=block",
         "X-Content-Type-Options": "nosniff",
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "W/\"d1d8490e3d32e7c181aed6de3e0fc8ac\"",
+        "Vary": "Origin",
+        "ETag": "W/\"14e2d4903069f137da7649d45c2b0939\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "32bd08a1-68c7-4ecc-9279-50ebc958d8ab",
-        "X-Runtime": "0.015616",
-        "Content-Length": "61"
+        "X-Request-Id": "c1a0f9e0-1634-4046-8bf8-6d6dd22db18f",
+        "X-Runtime": "0.020012",
+        "Content-Length": "59"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null

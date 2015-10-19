@@ -17,7 +17,7 @@
   "requests": [
     {
       "request_method": "DELETE",
-      "request_path": "/api/skills/3956",
+      "request_path": "/api/skills/775",
       "request_body": null,
       "request_headers": {
         "Host": "example.org",
@@ -34,10 +34,10 @@
         "X-Frame-Options": "SAMEORIGIN",
         "X-XSS-Protection": "1; mode=block",
         "X-Content-Type-Options": "nosniff",
+        "Vary": "Origin",
         "Cache-Control": "no-cache",
-        "Set-Cookie": "request_method=DELETE; path=/",
-        "X-Request-Id": "a98ecda1-68f5-451a-8f62-133a759e85db",
-        "X-Runtime": "0.013500"
+        "X-Request-Id": "feb4c708-9470-4aea-8637-8f588fda381a",
+        "X-Runtime": "0.009370"
       },
       "response_content_type": null,
       "curl": null
