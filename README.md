@@ -10,3 +10,4 @@
 3. Rspec 3.3.0
 4. PostgreSQL
 5. AngularJS 1.4.7
+6. Bootstrap 3.3
