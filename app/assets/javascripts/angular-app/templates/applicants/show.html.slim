@@ -1,0 +1,43 @@
+.row
+  h1.col-sm-6 =I18n.t(:title, scope: [:applicants, :show])
+  .page-actions.col-sm-6
+    a.btn.btn-link ui-sref="applicants.index"
+      =I18n.t(:back, scope: [:applicants, :show])
+    a.btn.btn-success ui-sref="applicants.edit({id: applicant.id})"
+      span.glyphicon.glyphicon-pencil
+      |&nbsp;
+      =I18n.t(:edit, scope: [:applicants, :show])
+hr
+.row
+  .col-md-10.col-md-offset-1
+    table.table.show-attributes
+      tr
+        th =I18n.t(:name, scope: [:activerecord, :attributes, :applicant])
+        td {{ applicant.name }}
+      tr
+        th =I18n.t(:phone, scope: [:activerecord, :attributes, :applicant])
+        td {{ applicant.phone }}
+      tr
+        th =I18n.t(:email, scope: [:activerecord, :attributes, :applicant])
+        td {{ applicant.email }}
+      tr
+        th =I18n.t(:is_active, scope: [:activerecord, :attributes, :applicant])
+        td ng-if="!applicant.is_active"
+          =I18n.t(:is_active, scope: [:applicants])[0]
+        td ng-if="applicant.is_active"
+          =I18n.t(:is_active, scope: [:applicants])[1]
+      tr
+        th =I18n.t(:salary, scope: [:activerecord, :attributes, :applicant])
+        td {{ applicant.salary }}
+      tr
+        th =I18n.t(:skills, scope: [:applicants, :show])
+        td
+          . ui-view="skills_table"
+
+h2 =I18n.t(:title, scope: [:applicants, :show, :vacancies])
+hr
+h3 =I18n.t(:strict, scope: [:applicants, :show, :vacancies])
+. ui-view="strict_vacancies_table"
+
+h3 =I18n.t(:partial, scope: [:applicants, :show, :vacancies])
+. ui-view="partial_vacancies_table"

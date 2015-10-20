@@ -70,3 +70,4 @@ gem 'bower-rails'
 gem 'bootstrap-sass'
 
 gem 'rack-cors'
+gem 'slim-rails'

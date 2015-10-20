@@ -1,0 +1,12 @@
+.row
+  h1.col-sm-6 =I18n.t(:title, scope: [:vacancies, :new])
+  .page-actions.col-sm-6
+    a.btn.btn-link ui-sref="vacancies.index"
+      =I18n.t(:back, scope: [:vacancies, :new])
+    a.btn.btn-primary ng-click="save()"
+      span.glyphicon.glyphicon-ok
+      |&nbsp;
+      =I18n.t(:submit, scope: [:vacancies, :new])
+
+hr
+. ui-view="form"

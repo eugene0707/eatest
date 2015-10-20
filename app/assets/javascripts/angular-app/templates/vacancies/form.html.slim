@@ -1,0 +1,37 @@
+. ui-view="flash"
+.row
+  form.form-horizontal
+    .form-group
+      label.col-sm-4.control-label for="input_name"
+        =I18n.t(:name, scope: [:activerecord, :attributes, :vacancy])
+      .col-sm-6
+        input.form-control[type="text" id="input_name" name="name" ng-model="$parent.object.name"
+          placeholder="#{I18n.t(:name, scope: [:activerecord, :attributes, :vacancy])}"]
+    .form-group
+      label.col-sm-4.control-label for="input_available_to"
+        =I18n.t(:available_to, scope: [:activerecord, :attributes, :vacancy])
+      .col-sm-6
+        input.form-control[type="date" id="input_available_to" name="available_to" ng-model="$parent.object.available_to"
+          placeholder="#{I18n.t(:available_to, scope: [:activerecord, :attributes, :vacancy])}"]
+    .form-group
+      label.col-sm-4.control-label for="input_salary"
+        =I18n.t(:salary, scope: [:activerecord, :attributes, :vacancy])
+      .col-sm-6
+        input.form-control[type="number" id="input_salary" name="salary" ng-model="$parent.object.salary"
+          placeholder="#{I18n.t(:salary, scope: [:activerecord, :attributes, :vacancy])}"]
+    .form-group
+      label.col-sm-4.control-label for="input_phone"
+        =I18n.t(:phone, scope: [:activerecord, :attributes, :vacancy])
+      .col-sm-6
+        input.form-control type="tel" id="input_phone" name="phone" ng-model="$parent.object.phone" placeholder="+7(495)000-0000"
+    .form-group
+      label.col-sm-4.control-label for="input_email"
+        =I18n.t(:email, scope: [:activerecord, :attributes, :vacancy])
+      .col-sm-6
+        input.form-control[type="email" id="input_email" name="email" ng-model="$parent.object.email"
+          placeholder="#{I18n.t(:email, scope: [:activerecord, :attributes, :vacancy])}"]
+    .form-group
+      label.col-sm-4.control-label for="input_skills"
+        =I18n.t(:skills, scope: [:vacancies, :show])
+      .col-sm-6
+        . ui-view="skills"

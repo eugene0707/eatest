@@ -1,0 +1,29 @@
+h4 ng-if="!items().length"
+  =I18n.t(:empty, scope: [:vacancies, :table])
+table.table ng-if="items().length"
+  thead
+    tr
+      th =I18n.t(:name, scope: [:activerecord, :attributes, :vacancy])
+      th =I18n.t(:created_at, scope: [:activerecord, :attributes, :vacancy])
+      th =I18n.t(:available_to, scope: [:activerecord, :attributes, :vacancy])
+      th =I18n.t(:salary, scope: [:activerecord, :attributes, :vacancy])
+      th =I18n.t(:phone, scope: [:activerecord, :attributes, :vacancy])
+      th =I18n.t(:email, scope: [:activerecord, :attributes, :vacancy])
+      th.actions ng-if="editable"
+  tbody
+    tr ng-repeat="vacancy in items()"
+      td
+        a ui-sref="vacancies.show({id:vacancy.id})"
+          | {{ vacancy.name }}
+      td {{ vacancy.created_at }}
+      td {{ vacancy.available_to }}
+      td {{ vacancy.salary }}
+      td {{ vacancy.phone }}
+      td {{ vacancy.email }}
+      td.actions.text-right ng-if="editable"
+        a.btn.btn-primary.btn-sm ui-sref="vacancies.edit({id:vacancy.id})"
+          span.glyphicon.glyphicon-pencil
+        |&nbsp;
+        a.btn.btn-danger.btn-sm ng-click="delete(vacancy, '#{I18n.t(:confirmation, scope: [:vacancies, :index])}')"
+          span.glyphicon.glyphicon-remove
+        |&nbsp;

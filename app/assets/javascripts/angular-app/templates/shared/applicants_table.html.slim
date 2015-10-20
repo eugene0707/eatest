@@ -1,0 +1,31 @@
+h4 ng-if="!items().length"
+  =I18n.t(:empty, scope: [:applicants, :table])
+
+table.table ng-if="items().length"
+  thead
+    tr
+      th =I18n.t(:name, scope: [:activerecord, :attributes, :applicant])
+      th =I18n.t(:phone, scope: [:activerecord, :attributes, :applicant])
+      th =I18n.t(:email, scope: [:activerecord, :attributes, :applicant])
+      th =I18n.t(:is_active, scope: [:activerecord, :attributes, :applicant])
+      th =I18n.t(:salary, scope: [:activerecord, :attributes, :applicant])
+      th.actions ng-if="editable"
+  tbody
+    tr ng-repeat="applicant in items()"
+      td
+        a ui-sref="applicants.show({id:applicant.id})"
+          | {{ applicant.name }}
+      td {{ applicant.phone }}
+      td {{ applicant.email }}
+      td ng-if="!applicant.is_active"
+        =I18n.t(:is_active, scope: [:applicants])[0]
+      td ng-if="applicant.is_active"
+        =I18n.t(:is_active, scope: [:applicants])[1]
+      td {{ applicant.salary }}
+      td.actions.text-right ng-if="editable"
+        a.btn.btn-primary.btn-sm ui-sref="applicants.edit({id:applicant.id})"
+          span.glyphicon.glyphicon-pencil
+        |&nbsp;
+        a.btn.btn-danger.btn-sm ng-click="delete(applicant, '#{I18n.t(:confirmation, scope: [:applicants, :index])}')"
+          span.glyphicon.glyphicon-remove
+        |&nbsp;

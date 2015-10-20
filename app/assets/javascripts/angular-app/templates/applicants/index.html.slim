@@ -1,0 +1,11 @@
+.row
+  h1.col-sm-6 =I18n.t(:title, scope: [:applicants, :index])
+  .page-actions.col-sm-6
+    a.btn.btn-link ui-sref="home"
+      =I18n.t(:back, scope: [:applicants, :index])
+    a.btn.btn-success ui-sref="applicants.new"
+      span.glyphicon.glyphicon-plus
+      |&nbsp;
+      =I18n.t(:new, scope: [:applicants, :index])
+hr
+. ui-view="applicants_table"

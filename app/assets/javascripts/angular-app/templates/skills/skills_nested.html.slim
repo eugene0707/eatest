@@ -1,0 +1,27 @@
+table.table.table-no-border.skills
+  tr ng-repeat="skill in skills" ng-class="{ 'active' : skill.id==nested_skill.id }"
+    td.text-right
+      label
+        input[type="checkbox" id="input_skill_ids" name="skill_ids[]" value="{{ skill.id }}"
+          ng-checked="$parent.object.skill_ids.indexOf(skill.id) > -1" ng-click="toggle_skill(skill.id)"]
+    td {{ skill.name }}
+    td.actions
+      a.btn.btn-primary.btn-sm ng-click="set_cursor(skill)"
+        span.glyphicon.glyphicon-pencil
+      |&nbsp;
+      a.btn.btn-danger.btn-sm ng-click="delete_skill(skill, '#{I18n.t(:confirmation, scope: [:skills, :index])}')"
+        span.glyphicon.glyphicon-remove
+      |&nbsp;
+  tr
+    td
+    td.input-control
+      input.form-control[type="text" id="input_name" name="name" ng-model="skill_name"
+        placeholder="#{I18n.t(:name, scope: [:activerecord, :attributes, :skill])}"]
+    td.actions
+      a.btn.btn-success.btn-sm ng-if="!nested_skill.id" ng-click="create_skill()"
+        span.glyphicon.glyphicon-plus
+      a.btn.btn-info.btn-sm ng-if="nested_skill.id" ng-click="update_skill()"
+        span.glyphicon.glyphicon-ok
+      |&nbsp;
+      a.btn.btn-sm ng-if="nested_skill.id" ng-click="set_cursor()"
+        span.glyphicon.glyphicon-remove

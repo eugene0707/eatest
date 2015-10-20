@@ -1,0 +1,39 @@
+. ui-view="flash"
+.row
+  form.form-horizontal
+    .form-group
+      label.col-sm-4.control-label for="input_name"
+        =I18n.t(:name, scope: [:activerecord, :attributes, :applicant])
+      .col-sm-6
+        input.form-control[type="text" id="input_name" name="name" ng-model="$parent.object.name"
+          placeholder="#{I18n.t(:name, scope: [:activerecord, :attributes, :applicant])}"]
+    .form-group
+      label.col-sm-4.control-label for="input_is_active"
+        =I18n.t(:is_active, scope: [:activerecord, :attributes, :applicant])
+      .col-sm-6
+        .checkbox
+          label
+            input[type="checkbox" id="input_is_active" name="is_active"
+              ng-model="$parent.object.is_active" ng-true-value="1" ng-false-value="0"]
+    .form-group
+      label.col-sm-4.control-label for="input_salary"
+        =I18n.t(:salary, scope: [:activerecord, :attributes, :applicant])
+      .col-sm-6
+        input.form-control[type="number" id="input_salary" name="salary" ng-model="$parent.object.salary"
+          placeholder="#{I18n.t(:salary, scope: [:activerecord, :attributes, :applicant])}"]
+    .form-group
+      label.col-sm-4.control-label for="input_phone"
+        =I18n.t(:phone, scope: [:activerecord, :attributes, :applicant])
+      .col-sm-6
+        input.form-control type="tel" id="input_phone" name="phone" ng-model="$parent.object.phone" placeholder="+7(495)000-0000"
+    .form-group
+      label.col-sm-4.control-label for="input_email"
+        =I18n.t(:email, scope: [:activerecord, :attributes, :applicant])
+      .col-sm-6
+        input.form-control[type="email" id="input_email" name="email" ng-model="$parent.object.email"
+          placeholder="#{I18n.t(:email, scope: [:activerecord, :attributes, :applicant])}"]
+    .form-group
+      label.col-sm-4.control-label for="input_skills"
+        =I18n.t(:skills, scope: [:applicants, :show])
+      .col-sm-6
+        . ui-view="skills"
