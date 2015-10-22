@@ -18,11 +18,13 @@
 //= require angular-resource/angular-resource
 //= require angular-ui-router/release/angular-ui-router
 //= require angular-sanitize/angular-sanitize
+//= require angular-loading-bar
 
-// require angular-bootstrap
-// require bootstrap-sprockets
+//= require angular-bootstrap
+//= require bootstrap-sprockets
 
 //= require angular-app/app
+//= require_tree ./angular-app/directives
 //= require_tree ./angular-app/templates
 //= require_tree ./angular-app/services
 //= require_tree ./angular-app/controllers

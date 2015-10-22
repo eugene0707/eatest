@@ -14,8 +14,6 @@
         $scope.skill_name = null
         delete $scope.nested_skill
         $scope.skills = SkillService.index()
-      ,(error)->
-        $scope.$parent.flash_message={errors: error.data}
       )
 
     $scope.update_skill=->
@@ -25,8 +23,6 @@
         $scope.skill_name = null
         delete $scope.nested_skill
         $scope.skills = SkillService.index()
-      ,(error)->
-        $scope.$parent.flash_message={errors: error.data}
       )
 
     $scope.set_cursor=(skill)->
@@ -44,6 +40,5 @@
         $scope.$parent.object.skill_ids.splice(skill_index, 1)
       else
         $scope.$parent.object.skill_ids.push(skill_id)
-
 
 ])

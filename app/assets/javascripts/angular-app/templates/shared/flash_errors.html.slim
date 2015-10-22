@@ -1,6 +1,0 @@
-.alert.alert-danger ng-if="flash_message.errors"
-  .close
-    button.close type="button" ng-click="flash_message.errors=''" &times;
-  p ng-repeat="(key, value) in flash_message.errors"
-    strong {{ key }}:
-    | {{ value.toString() }}

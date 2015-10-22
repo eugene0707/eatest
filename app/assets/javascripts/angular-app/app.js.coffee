@@ -4,6 +4,8 @@
   'ngSanitize'
   'restangular'
   'ui.router'
+  'angular-loading-bar'
+  'ui.bootstrap'
 ])
 
 @app.config([
@@ -15,6 +17,19 @@
     .setRequestSuffix('.json')
 ])
 
-@app.run(->
-  console.log 'employmentAgency app running'
-)
+@app.run([
+  '$rootScope'
+  'Restangular'
+  ($rootScope, Restangular)->
+    $rootScope.flash_messages = new Array()
+    Restangular.setErrorInterceptor((response)->
+      $rootScope.flash_messages.push(
+        id: Date.now()
+        type: 'danger'
+        data: response.data
+      )
+      true
+    )
+
+    console.log 'employmentAgency app running'
+])

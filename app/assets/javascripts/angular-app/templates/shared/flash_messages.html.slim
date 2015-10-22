@@ -1,0 +1,5 @@
+.flash
+  uib-alert ng-repeat="message in messages" type="{{message.type}}" dismiss-on-timeout='5000' close="close_message($index)"
+    . ng-repeat="(key, value) in message.data"
+      strong {{ key }}:
+      |&nbsp; {{ value.toString() }}
