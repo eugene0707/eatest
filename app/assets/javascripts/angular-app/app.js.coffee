@@ -21,13 +21,12 @@
   '$rootScope'
   'Restangular'
   ($rootScope, Restangular)->
-    $rootScope.flash_messages = new Array()
     Restangular.setErrorInterceptor((response)->
-      $rootScope.flash_messages.push(
+      $rootScope.flash_message=
         id: Date.now()
         type: 'danger'
         data: response.data
-      )
+
       true
     )
 
