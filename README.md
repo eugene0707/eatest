@@ -15,7 +15,7 @@
 5. AngularJS 1.4.7
 6. Bootstrap 3.3
 
-####Запуск на локального стенда
+####Запуск локального стенда
 
 1. bundle install
 2. npm install
