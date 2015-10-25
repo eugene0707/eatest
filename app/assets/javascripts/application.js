@@ -20,8 +20,7 @@
 //= require angular-sanitize/angular-sanitize
 //= require angular-loading-bar
 
-//= require angular-bootstrap/ui-bootstrap
-//= require angular-bootstrap/ui-bootstrap-tpls
+//= require angular-bootstrap
 //= require angular-ui-mask/dist/mask
 
 //= require bootstrap-sprockets
