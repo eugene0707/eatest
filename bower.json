@@ -1,4 +1,17 @@
 {
+  "name": "Employment-Agency",
+  "dependencies": {
+    "angular": "v1.4.7",
+    "angular-route": "v1.4.7",
+    "restangular": "v1.5.1",
+    "angular-resource": "v1.4.7",
+    "angular-sanitize": "v1.4.7",
+    "angular-ui-router": "v0.2.15",
+    "angular-bootstrap": "v0.14.3",
+    "angular-loading-bar": "v0.8.0",
+    "angular-ui-mask": "v1.4.7",
+    "angular-mocks": "v1.4.7"
+  },
   "lib": {
     "name": "bower-rails generated lib assets",
     "dependencies": {
