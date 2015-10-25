@@ -10,9 +10,8 @@ capybara-*.html
 /public/system
 /coverage/
 /spec/tmp
-/vendor/assets/bower_components
+/lib/assets/bower_components/
 *.bowerrc
-bower.json
 
 # Ignore bundler config.
 /.bundle
