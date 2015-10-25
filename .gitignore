@@ -11,6 +11,7 @@ capybara-*.html
 /coverage/
 /spec/tmp
 /lib/assets/bower_components/
+/node_modules/
 
 # Ignore bundler config.
 /.bundle

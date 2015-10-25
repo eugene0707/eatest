@@ -71,7 +71,7 @@ vacancies:
     name: 'Разработчик-автоматизатор'
     available_to: 14
     salary: 130000
-    phone: '+7(495)1234567'
+    phone: '+7(495)123-4567'
     skill_ids: [2, 3]
 
 applicants:
@@ -135,6 +135,6 @@ applicants:
     name: 'Чернов Андрей Павлович'
     is_active: 1
     salary: 150000
-    phone: '+7(495)1234567'
+    phone: '+7(495)123-4567'
     skill_ids: [2, 3]
 
