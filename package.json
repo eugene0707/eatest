@@ -2,11 +2,11 @@
   "name": "Employment-Agency",
   "version": "1.0.0",
   "dependencies": {
-    "bower": "~1.2"
+    "bower": "1.6.3"
   },
   "engine": {
-    "node": "0.10.x",
-    "npm": "1.3.x"
+    "node": "4.2.1",
+    "npm": "2.14.7"
   },
   "scripts": {
     "postinstall": "bower install"
