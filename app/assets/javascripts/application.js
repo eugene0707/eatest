@@ -10,18 +10,18 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //= require jquery
-//= require angular/angular
-//= require angular-route/angular-route
-//= require lodash/lodash
-//= require restangular/dist/restangular
+//= require angular
+//= require angular-route
+//= require lodash
+//= require restangular
 //= require angular-rails-templates
-//= require angular-resource/angular-resource
-//= require angular-ui-router/release/angular-ui-router
-//= require angular-sanitize/angular-sanitize
+//= require angular-resource
+//= require angular-ui-router
+//= require angular-sanitize
 //= require angular-loading-bar
 
 //= require angular-bootstrap
-//= require angular-ui-mask/dist/mask
+//= require angular-ui-mask
 
 //= require bootstrap-sprockets
 
