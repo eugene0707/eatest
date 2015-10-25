@@ -21,6 +21,8 @@
 //= require angular-loading-bar
 
 //= require angular-bootstrap
+//= require angular-ui-mask
+
 //= require bootstrap-sprockets
 
 //= require angular-app/app

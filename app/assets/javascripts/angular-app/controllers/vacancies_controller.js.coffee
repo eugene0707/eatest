@@ -28,6 +28,9 @@
   ($scope, $state, VacancyService)->
 
     $scope.save=->
+      return if angular.element(form).hasClass('ng-invalid')
+      $scope.object.phone=null if $scope.object.phone==''
+      $scope.object.available_to = new Date(new Date($scope.object.available_to).getTime() - (new Date()).getTimezoneOffset()*60000)
       VacancyService.create(vacancy: $scope.object).then(->
         $state.transitionTo('vacancies.index')
       )
@@ -48,12 +51,13 @@
     )
 
     $scope.save=->
+      return if angular.element(form).hasClass('ng-invalid')
       $scope.object.vacancy =
         name: $scope.object.name
         available_to: $scope.object.available_to
         salary: $scope.object.salary
         phone: if $scope.object.phone then $scope.object.phone else null
-        email: if $scope.object.email then $scope.object.email else null
+        email: $scope.object.email
         skill_ids: $scope.object.skill_ids
 
       $scope.object.put().then(->

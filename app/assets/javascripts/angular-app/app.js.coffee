@@ -6,6 +6,7 @@
   'ui.router'
   'angular-loading-bar'
   'ui.bootstrap'
+  'ui.mask'
 ])
 
 @app.config([
@@ -26,7 +27,9 @@
         id: Date.now()
         type: 'danger'
         data: response.data
-
+      $rootScope.$applyAsync(->
+        $rootScope.flash_message = {}
+      )
       true
     )
 

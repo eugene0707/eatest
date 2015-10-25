@@ -1,12 +1,22 @@
 .col-sm-10.col-sm-offset-1[flash-messages]
 .row
-  form.form-horizontal
-    .form-group
-      label.col-sm-4.control-label for="input_name"
+  form.form-horizontal name="form" ng-model-options="{ updateOn: 'blur' }"
+    .form-group.has-error
+      .col-sm-4
+      .col-sm-6
+        p.help-block ng-show="form.$valid"
+          |&nbsp;
+        p.help-block ng-show="form.$invalid"
+          =I18n.t(:required, scope: [:applicants, :form])
+    .form-group[ng-class="{'has-error': form.applicant_name.$invalid}"]
+      label.col-sm-4.control-label for="applicant_name"
         =I18n.t(:name, scope: [:activerecord, :attributes, :applicant])
       .col-sm-6
-        input.form-control[type="text" id="input_name" name="name" ng-model="$parent.object.name"
-          placeholder="#{I18n.t(:name, scope: [:activerecord, :attributes, :applicant])}"]
+        input.form-control[type="text" id="applicant_name" name="applicant_name" ng-model="$parent.object.name"
+          placeholder="#{I18n.t(:name, scope: [:activerecord, :attributes, :applicant])}"
+          ng-pattern="/^([а-я]+)( [а-я]+){2}$/i" ng-required="true" empty-to-null]
+        p.help-block ng-if="form.applicant_name.$error.pattern"
+          =I18n.t(:invalid_name, scope: [:applicants, :form])
     .form-group
       label.col-sm-4.control-label for="input_is_active"
         =I18n.t(:is_active, scope: [:activerecord, :attributes, :applicant])
@@ -15,23 +25,27 @@
           label
             input[type="checkbox" id="input_is_active" name="is_active"
               ng-model="$parent.object.is_active" ng-true-value="1" ng-false-value="0"]
-    .form-group
+    .form-group[ng-class="{'has-error': form.salary.$invalid}"]
       label.col-sm-4.control-label for="input_salary"
         =I18n.t(:salary, scope: [:activerecord, :attributes, :applicant])
       .col-sm-6
         input.form-control[type="number" id="input_salary" name="salary" ng-model="$parent.object.salary"
-          placeholder="#{I18n.t(:salary, scope: [:activerecord, :attributes, :applicant])}"]
-    .form-group
+          placeholder="#{I18n.t(:salary, scope: [:activerecord, :attributes, :applicant])}" ng-required="true"
+          min="1" pattern="\d+" empty-to-null]
+    .form-group[ng-class="{'has-error': form.phone.$invalid}"]
       label.col-sm-4.control-label for="input_phone"
         =I18n.t(:phone, scope: [:activerecord, :attributes, :applicant])
       .col-sm-6
-        input.form-control type="tel" id="input_phone" name="phone" ng-model="$parent.object.phone" placeholder="+7(495)000-0000"
-    .form-group
+        input.form-control[type="tel" id="input_phone" name="phone" ng-model="$parent.object.phone"
+          ui-mask="{{'+9??(999)999-9999'}}" ui-mask-placeholder empty-to-null model-view-value="true"
+          ng-required="!$parent.object.email"]
+    .form-group[ng-class="{'has-error': form.email.$invalid}"]
       label.col-sm-4.control-label for="input_email"
         =I18n.t(:email, scope: [:activerecord, :attributes, :applicant])
       .col-sm-6
         input.form-control[type="email" id="input_email" name="email" ng-model="$parent.object.email"
-          placeholder="#{I18n.t(:email, scope: [:activerecord, :attributes, :applicant])}"]
+          placeholder="#{I18n.t(:email, scope: [:activerecord, :attributes, :applicant])}" empty-to-null
+          ng-required="!$parent.object.phone"]
     .form-group
       label.col-sm-4.control-label for="input_skills"
         =I18n.t(:skills, scope: [:applicants, :show])

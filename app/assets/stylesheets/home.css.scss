@@ -10,15 +10,17 @@
   text-align: right;
 }
 
-td {
-  padding-top: 13px !important;
-}
-
-.actions {
-  padding-top: 8px !important;
-}
-
 table {
+  &.table {
+    td {
+      padding-top: 13px !important;
+
+      &.actions {
+        padding-top: 8px !important;
+      }
+    }
+  }
+
   &.show-attributes {
     tr:first-child {
       td, th {

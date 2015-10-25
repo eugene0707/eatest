@@ -39,3 +39,5 @@ ru:
       cancel: Назад
     table:
       empty: Отсутствуют
+    form:
+      required: Заполните все обязательные поля

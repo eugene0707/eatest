@@ -28,6 +28,7 @@
   ($scope, $state, ApplicantService)->
 
     $scope.save=->
+      return if angular.element(form).hasClass('ng-invalid')
       ApplicantService.create(applicant: $scope.object).then(->
         $state.transitionTo('applicants.index')
       )
@@ -46,6 +47,7 @@
     )
 
     $scope.save=->
+      return if angular.element(form).hasClass('ng-invalid')
       $scope.object.applicant =
         name: $scope.object.name
         is_active: $scope.object.is_active
